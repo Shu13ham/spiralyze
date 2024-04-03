@@ -46,19 +46,50 @@ body {
   font-weight: 400;
 }
 
-.slider {
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1184px;
+  }
+}
+main .testimonial-wrapper .slider {
   position: relative;
   width: 100%;
   overflow: hidden;
 }
-.slider .slides {
+main .testimonial-wrapper .slider .slides {
   display: flex;
   transition: transform 0.5s ease;
 }
-.slider .slides .slide {
+main .testimonial-wrapper .slider .slides .slide {
   min-width: 100%;
 }
-.slider button {
+main .testimonial-wrapper .slider .slides .slide button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -68,9 +99,9 @@ body {
   cursor: pointer;
   padding: 10px;
 }
-.slider button .prev {
+main .testimonial-wrapper .slider .slides .slide button .prev {
   left: 0;
 }
-.slider button .next {
+main .testimonial-wrapper .slider .slides .slide button .next {
   right: 0;
 }/*# sourceMappingURL=index.css.map */

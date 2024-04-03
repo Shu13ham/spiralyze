@@ -47,34 +47,221 @@ body {
     font-weight: 400;
 }
 
-.slider {
-    position: relative;
+.container {
     width: 100%;
-    overflow: hidden;
-    .slides {
-        display: flex;
-        transition: transform 0.5s ease;
-        .slide {
-            min-width: 100%;
-        }
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
     }
-    button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(0, 0, 0, 0.5);
-        color: white;
-        border: none;
-        cursor: pointer;
-        padding: 10px;
-        .prev {
-            left: 0;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1184px;
+    }
+}
+
+header{
+    .logo-wrapper{
+        img{}
+    }
+    nav{
+        .hamburger{
+            .hamburger-btn{
+                img{}
+            }
         }
-        
-        .next {
-            right: 0;
+        .nav-link-wrapper{
+            .nav-links{
+                li{
+                    a{}
+                }  
+            }
+            .call-consult{
+                p{
+                    a{}
+                }
+            }
+        }  
+    }
+    .navbar-mobile-wrapper{
+        .X{
+            
+        }
+        .nav-links{
+            li{
+                a{}
+            }
         }
     }
 }
-  
-  
+
+main{
+    .banner-wrapper{
+        .banner-intro{
+            h1{
+                .first-line{}
+                .second-line{}
+            }
+            .banner-para{}
+        }
+        .banner-form-wrapper{
+            .banner-form{
+                p{}
+                form{
+                    label{}
+                    input{}
+                    datalist{
+                        option{}
+                    }
+                    button{
+                        .form-submit-btn{}
+                    }
+                }
+            }
+        }
+    }
+
+    .we-understand-wrapper{
+        .we-understand-images{
+            img{}
+        }
+        .we-understand-text{
+            .about-heading{}
+            .we-understand-para-wrapper{
+                .we-understand-para{}
+            }
+        }
+    }
+            
+    .testimonial-wrapper{
+        .slider{
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            .slides{
+                display: flex;
+                transition: transform 0.5s ease;
+                .testimonial{
+                    .image{
+                        img{}
+                    }
+                    .comment{
+                        .comment-title{}
+                        .comment-params{}
+                        img{}
+                    }
+                } 
+                .slide{
+                    min-width: 100%;
+                    button {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background: rgba(0, 0, 0, 0.5);
+                        color: white;
+                        border: none;
+                        cursor: pointer;
+                        padding: 10px;
+                        .prev {
+                            left: 0;
+                        }
+                        
+                        .next {
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .we-can-organize-wrapper{
+        h2{}
+        .organize-para-wrapper{
+            .interventions-para{}
+                p{}
+        }
+        .organize-cards-wrapper{
+            h3{}
+            .on-hover-para{
+                p{}
+            }
+        }                           
+    }
+
+    .organize-cards-wrapper{
+        h3{}
+        .on-hover-para{
+            p{}
+        }
+    }
+            
+    .video-wrapper{
+        .video-text-wrapper{
+            h2{}
+            .video-bullet-points{
+                img{}
+                h3{}
+                p{}
+            }
+        }     
+        .video-src-wrapper{
+            video{}
+            img{}
+            .play-btn{}
+        }
+        .footer-logo-img{}
+    }
+}
+
+footer{
+    .copyright{
+        p{}
+    }
+    .footer-links{
+        a{}
+    }
+}
+
+// @media screen and (max-width: 1200px) {
+    
+// }
+
+@media screen and (max-width: 992px) {
+    
+}
+
+@media screen and (max-width: 768px) {
+    
+}
+
+@media screen and (max-width: 576px) {
+
+}
+
+// @media screen and (max-width: 375px) {
+
+// }

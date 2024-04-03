@@ -1,29 +1,76 @@
 @font-face {
-    font-family: "montserrat-light";
-    src: url('../_fonts/Montserrat-Light.ttf');
-    font-display: auto;
+  font-family: "montserrat-regular";
+  src: url("../_fonts/Montserrat-Regular.ttf");
+  font-display: auto;
 }
 @font-face {
-    font-family: "montserrat-medium";
-    src: url('../_fonts/Montserrat-Medium.ttf');
-    font-display: auto;
+  font-family: "montserrat-bold";
+  src: url("../_fonts/Montserrat-Bold.ttf");
+  font-display: auto;
 }
 @font-face {
-    font-family: "montserrat-regular";
-    src: url('../_fonts/Montserrat-Regular.ttf');
-    font-display: auto;
+  font-family: "montserrat-extrabold";
+  src: url("../_fonts/Montserrat-ExtraBold.ttf");
+  font-display: auto;
 }
-@font-face {
-    font-family: "montserrat-bold";
-    src: url('../_fonts/Montserrat-Bold.ttf');
-    font-display: auto;
-}
-@font-face {
-    font-family: "montserrat-extrabold";
-    src: url('../_fonts/Montserrat-ExtraBold.ttf');
-    font-display: auto;
+:root {
+  --dark: #194D44;
+  --light: #297C6B;
+  --medium: #5BC8AF;
+  --text-color: #333;
+  --faded: #EAEAEA;
+  --body-bg: #F5F5F5;
+  --fs-13: 13px;
+  --fs-14: 14px;
+  --fs-16: 16px;
+  --fs-18: 18px;
+  --fs-24: 24px;
+  --fs-28: 28px;
+  --fs-36: 36px;
+  --fs-44: 44px;
+  --fs-64: 64px;
+  --fw-400: montserrat-regular;
+  --fw-700: montserrat-bold;
+  --fw-800: montserrat-extrabold;
 }
 
-body{
-    font-family: "Montserrat-regular";
+* {
+  margin: 0;
+  padding: 0;
 }
+
+body {
+  font-family: "Montserrat-regular", sans-serif;
+  height: 100%;
+  background-color: var(--body-background);
+  font-weight: 400;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.slider .slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.slider .slides .slide {
+  min-width: 100%;
+}
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+.slider button .prev {
+  left: 0;
+}
+.slider button .next {
+  right: 0;
+}/*# sourceMappingURL=index.css.map */

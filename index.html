@@ -145,20 +145,54 @@
         </section>
 
         <section class="testimonial-wrapper">
-            <div class="testimonial">
-                <div class="image">
-                    <img src="./_assets/_images/testimonials/testimonials1.png" alt="">
+            <div class="slider" ontouchstart="startDrag(event)" ontouchmove="drag(event)" ontouchend="endDrag()">
+                <div class="slides">
+                    <div class="testimonial slide">
+                        <div class="image">
+                            <img src="./_assets/_images/testimonials/testimonials1.png" alt="">
+                        </div>
+                        <div class="comment">
+                            <h4 class="comment-title">Abbie Harvey</h4>
+                            <p class="comment-params">
+                                I have been caring for my mom & dad off and on for about 10 years now, 
+                                and I know the importance of me being there for appointments. 
+                                Older people need attention, love and care that they truly deserve.
+                            </p>
+                            <img src="./_assets/_images/svg/qoutes.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="testimonial slide">
+                        <div class="image">
+                            <img src="./_assets/_images/testimonials/testimonials2.png" alt="">
+                        </div>
+                        <div class="comment">
+                            <h4 class="comment-title">Abbie Harvey</h4>
+                            <p class="comment-params">
+                                I have been caring for my mom & dad off and on for about 10 years now, 
+                                and I know the importance of me being there for appointments. 
+                                Older people need attention, love and care that they truly deserve.
+                            </p>
+                            <img src="./_assets/_images/svg/qoutes.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="testimonial slide">
+                        <div class="image">
+                            <img src="./_assets/_images/testimonials/testimonials3.png" alt="">
+                        </div>
+                        <div class="comment">
+                            <h4 class="comment-title">Abbie Harvey</h4>
+                            <p class="comment-params">
+                                I have been caring for my mom & dad off and on for about 10 years now, 
+                                and I know the importance of me being there for appointments. 
+                                Older people need attention, love and care that they truly deserve.
+                            </p>
+                            <img src="./_assets/_images/svg/qoutes.svg" alt="">
+                        </div>
+                    </div>
                 </div>
-                <div class="comment">
-                    <h4 class="comment-title">Abbie Harvey</h4>
-                    <p class="comment-params">
-                        I have been caring for my mom & dad off and on for about 10 years now, 
-                        and I know the importance of me being there for appointments. 
-                        Older people need attention, love and care that they truly deserve.
-                    </p>
-                    <img src="./_assets/_images/svg/qoutes.svg" alt="">
-                </div>
-            </div>
+                <button class="prev" onclick="moveSlide(-1)">&#8592;</button>
+                <button class="next" onclick="moveSlide(1)">&#8594;</button>
+            </div>  
         </section>
 
         <section class="we-can-organize-wrapper">
@@ -294,7 +328,7 @@
         </div>
     </footer>
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", function () {
             const hamburgerIcon = document.querySelector(".hamburger-icon");
             const crossIcon = document.querySelector(".close-icon");
@@ -310,7 +344,8 @@
                 navbarMobile.style.display = "none";
             });
         });
-    </script>
+    </script> -->
+    <script src="./_assets/_js/index.js"></script>
 
 </body>
 

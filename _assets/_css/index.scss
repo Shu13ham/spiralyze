@@ -37,6 +37,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: "Montserrat-regular", sans-serif;
 }
 
 body {
@@ -158,63 +159,69 @@ body {
 .relative{
     position: relative;
 }
-
-header{
-    padding-top: 21px;
-    .logo-wrapper{
-        img{}
-    }
-    nav{
-        .hamburger{
-            .hamburger-btn{
-                img{}
-            }
+.header-banner-wrapper{
+    background-image: url("../_images/banner-section/banner-desktop.png");
+    background-repeat: no-repeat;
+    position: relative;
+    header{
+        padding-top: 21px;
+        .logo-wrapper{
+            img{}
         }
-        .nav-link-wrapper{
-            .nav-links{
-                li{
-                    list-style-type: none;
-                    a{
-                        font-size: var(--fs-14);
-                        font-weight: var(--fw-400);
-                        text-decoration: none;
-                        color: var(--text-color);
-                        margin-right: 31px;
-                        line-height: 41px;
-                        &.active{
-                            font-weight: var(--fw-700);
-                        }
-                    }
-                }  
-            }
-            .call-consult{
-                margin-left: 46px;
-                p{
-                    font-size: var(--fs-14);
-                    font-weight: var(--fw-700);
-                    line-height: 41px;
-                    a{
-                        color: var(--medium);
-                    }
+        nav{
+            .hamburger{
+                .hamburger-btn{
+                    img{}
                 }
             }
-        }  
-    }
-    .navbar-mobile-wrapper{
-        .X{
-            
+            .nav-link-wrapper{
+                .nav-links{
+                    li{
+                        list-style-type: none;
+                        a{
+                            font-size: var(--fs-14);
+                            font-weight: var(--fw-400);
+                            text-decoration: none;
+                            color: #ffffffb3;
+                            margin-right: 31px;
+                            line-height: 41px;
+                            &.active{
+                                font-weight: var(--fw-700);
+                                color: #ffffff;
+                            }
+                        }
+                        color: #ffffffb3;
+                    }  
+                }
+                .call-consult{
+                    margin-left: 46px;
+                    p{
+                        font-size: var(--fs-14);
+                        font-weight: var(--fw-700);
+                        line-height: 41px;
+                        color: #fff;
+                        a{
+                            color: var(--medium);
+                        }
+                    }
+                }
+            }  
         }
-        .nav-links{
-            li{
-                a{}
+        .navbar-mobile-wrapper{
+            .X{
+                
+            }
+            .nav-links{
+                li{
+                    a{}
+                }
             }
         }
     }
-}
-
-main{
     .banner-wrapper{
-        background: var(--body-bg);
+        // background: var(--body-bg);
+        padding-top: 66px;
+        padding-bottom: 75px;
         .banner-intro{
             width: 50%;
             h1{
@@ -222,6 +229,7 @@ main{
                 font-weight: var(--fw-700);
                 line-height: 72px;
                 margin-bottom: 12px;
+                color: #fff;
                 .first-line{
                     -webkit-text-stroke-width: 1px;
                     -webkit-text-stroke-color: #fff;
@@ -234,11 +242,11 @@ main{
                 font-size: var(--fs-14);
                 font-weight: var(--fw-400);
                 line-height: 24px;
+                color: #fff;
             }
         }
         .banner-form-wrapper{
-            padding: 109px;
-            width: 50%;
+            width: 472px;
             .banner-form{
                 padding: 51px 28px 56px;
                 background: linear-gradient(180deg, #2A7D6C 0%, rgba(62, 105, 96, 0.62) 100%);
@@ -314,8 +322,26 @@ main{
                 }
             }
         }
+        .banner-overlay{
+            height: 89px;
+            position: absolute;
+            bottom: 0;
+            img{
+                width: 100%;
+            }
+        }
+        .banner-overlay-secondary{
+            height: 111px;
+            position: absolute;
+            bottom: 0;
+            img{
+                width: 100%;
+            }
+        }
     }
+}
 
+main{
     .we-understand-wrapper{
         padding-bottom: 140px;
         padding-top: 80px;
@@ -363,6 +389,7 @@ main{
     }
             
     .testimonial-wrapper{
+        margin-top: -30px;
         .slider{
             position: relative;
             width: 100%;
@@ -382,7 +409,11 @@ main{
                         box-shadow: 0px 10px 30px 0px #0000001F;
                         border-radius: 0 8px 8px 0;
                         padding: 62px 65px 45px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
                         position: relative;
+                        // height: 100%;
                         .comment-title{
                             font-size: var(--fs-24);
                             font-weight: var(--fw-700);
@@ -396,6 +427,7 @@ main{
                             line-height: 28px;
                             font-style: italic;
                             color: #fff;
+                            width: 545px;
                         }
                         img{
                             position: absolute;

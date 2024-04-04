@@ -11,7 +11,6 @@
 @font-face {
   font-family: "montserrat-extrabold";
   src: url("../_fonts/Montserrat-ExtraBold.ttf");
-  font-display: auto;
 }
 :root {
   --dark: #194D44;
@@ -52,14 +51,24 @@ body {
   margin-left: auto;
 }
 
+.video-content-wrapper {
+  padding-left: 16px;
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
+  }
+  .video-content-wrapper {
+    padding-left: 18px;
   }
 }
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
+  }
+  .video-content-wrapper {
+    padding-left: 24px;
   }
 }
 @media (min-width: 992px) {
@@ -72,15 +81,24 @@ body {
   .d-lg-block {
     display: block;
   }
+  .video-content-wrapper {
+    padding-left: 16px;
+  }
 }
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
   }
+  .video-content-wrapper {
+    padding-left: 30px;
+  }
 }
 @media (min-width: 1440px) {
   .container {
     max-width: 1184px;
+  }
+  .video-content-wrapper {
+    padding-left: 128px;
   }
 }
 .d-none {
@@ -174,6 +192,10 @@ main .banner-wrapper .banner-intro h1 {
   font-weight: var(--fw-700);
   line-height: 72px;
   margin-bottom: 12px;
+}
+main .banner-wrapper .banner-intro h1 .first-line {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
 }
 main .banner-wrapper .banner-intro h1 .second-line {
   display: block;
@@ -362,6 +384,7 @@ main .testimonial-wrapper .slider button.next {
 }
 main .we-can-organize-wrapper {
   padding-bottom: 100px;
+  padding-top: 100px;
 }
 main .we-can-organize-wrapper h2 {
   font-size: var(--fs-36);
@@ -416,7 +439,7 @@ main .video-wrapper .video-content-wrapper {
 }
 main .video-wrapper .video-content {
   color: #fff;
-  padding: 94px 180px 93px 0;
+  margin: 94px 0 93px 0;
 }
 main .video-wrapper .video-content h2 {
   font-size: var(--fs-44);
@@ -427,6 +450,8 @@ main .video-wrapper .video-content h2 {
 main .video-wrapper .video-content .video-bullet-points {
   position: relative;
   margin-bottom: 22px;
+  padding-left: 30px;
+  width: 430px;
 }
 main .video-wrapper .video-content .video-bullet-points h3 {
   font-size: var(--fs-24);
@@ -437,7 +462,7 @@ main .video-wrapper .video-content .video-bullet-points h3 {
 main .video-wrapper .video-content .video-bullet-points img {
   position: absolute;
   top: 10px;
-  left: -30px;
+  left: 0px;
   z-index: 1;
 }
 main .video-wrapper .video-content .video-bullet-points p {
@@ -446,6 +471,33 @@ main .video-wrapper .video-content .video-bullet-points p {
   line-height: 28px;
 }
 main .video-wrapper.video-bg-img {
-  background-image: url(../_images/video-section/video-desktop.png);
+  background-image: url("../_images/video-section/video-desktop.png"), url("../_images/video-section/video-overlay-desktop.png");
   background-repeat: no-repeat;
+}
+main .video-wrapper .video-src-wrapper {
+  position: relative;
+  z-index: -1;
+}
+main .video-wrapper .footer-logo-img {
+  position: absolute;
+  bottom: 35px;
+  right: 35px;
+}
+
+footer {
+  padding: 38px 0;
+  background: var(--faded);
+}
+footer .copyright p {
+  font-size: var(--fs-14);
+  font-weight: var(--fw-400);
+  line-height: 24px;
+  color: #757575;
+}
+footer .footer-links a {
+  font-size: var(--fs-14);
+  font-weight: var(--fw-400);
+  line-height: 24px;
+  color: #757575;
+  text-decoration: none;
 }/*# sourceMappingURL=index.css.map */

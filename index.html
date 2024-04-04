@@ -12,43 +12,42 @@
 </head>
 
 <body class="">
-    <header class="">
-        <div class="container d-flex justify-between align-center">
-            <div class="logo-wrapper">
-                <img class="main-logo" src="./_assets/_images/branding/logo.png" alt="" height="35">
-            </div>
-            <nav>
-                <div class="hamburger d-none">
-                    <button type="button" class="hamburger-btn">
-                        <img src="./_assets/_images/svg/hamburger.svg" width="" height="" alt="" class="">
-                    </button>
+    <div class="header-banner-wrapper">
+        <header class="">
+            <div class="container d-flex justify-between align-center">
+                <div class="logo-wrapper">
+                    <img class="main-logo" src="./_assets/_images/branding/logo.png" alt="" height="35">
                 </div>
-                <div class="nav-link-wrapper d-flex align-center">
-                    <ul class="nav-links d-flex align-center">
-                        <li class=""><a href="#">HOME</a></li>
-                        <li class=""><a href="#">ABOUT</a></li>
-                        <li class=""><a href="#">CONTACT</a></li>
-                        <li class="">|</li>
-                    </ul>
-                    <div class="call-consult">
-                        <p>CALL NOW FOR A CONSULT <a class="call-link">123.456.7890</a></p>
+                <nav>
+                    <div class="hamburger d-none">
+                        <button type="button" class="hamburger-btn">
+                            <img src="./_assets/_images/svg/hamburger.svg" width="" height="" alt="" class="">
+                        </button>
                     </div>
-                </div>
-                <div class="navbar-mobile-wrapper d-none">
-                    <button class="">X</button>
-                    <ul class="nav-links">
-                        <li class="">HOME</li>
-                        <li class=""><a href="#">ABOUT</a></li>
-                        <li class=""><a href="#">CONTACT</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <main>
+                    <div class="nav-link-wrapper d-flex align-center">
+                        <ul class="nav-links d-flex align-center">
+                            <li class=""><a href="#" class="active">HOME</a></li>
+                            <li class=""><a href="#">ABOUT</a></li>
+                            <li class=""><a href="#">CONTACT</a></li>
+                            <li class="">|</li>
+                        </ul>
+                        <div class="call-consult">
+                            <p>CALL NOW FOR A CONSULT <a class="call-link">&nbsp;123.456.7890</a></p>
+                        </div>
+                    </div>
+                    <div class="navbar-mobile-wrapper d-none">
+                        <button class="">X</button>
+                        <ul class="nav-links">
+                            <li class="">HOME</li>
+                            <li class=""><a href="#">ABOUT</a></li>
+                            <li class=""><a href="#">CONTACT</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
         <section class="banner-wrapper">
-            <div class="container d-flex justify-center align-center">
+            <div class="container d-flex justify-between align-center">
                 <div class="banner-intro">
                     <h1>
                         <span class="first-line">GET AN</span>
@@ -102,8 +101,16 @@
                     </div>
                 </div>
             </div>
+            <div class="banner-overlay">
+                <img src="./_assets/_images/banner-section/banner-overlay-desktop.png" alt="">
+            </div>
+            <div class="banner-overlay-secondary">
+                <img src="./_assets/_images/banner-section/banner-sec-overlay-desktop.png" alt="">
+            </div>
         </section>
+    </div>
 
+    <main>
         <section class="we-understand-wrapper">
             <div class="container">
                 <div class="we-understand-images d-flex justify-center align-center">
@@ -147,7 +154,7 @@
 
         <section class="testimonial-wrapper">
             <div class="container">
-                <div class="slider  d-flex justify-between align-center" ontouchstart="startDrag(event)" ontouchmove="drag(event)" ontouchend="endDrag()">
+                <div class="slider d-flex justify-between align-center" ontouchstart="startDrag(event)" ontouchmove="drag(event)" ontouchend="endDrag()">
                     <button class="prev" onclick="moveSlide(-1)"><img src="./_assets/_images/svg/left-arrow.svg" alt=""></button>
                     <div class="slides">
                         <div class="testimonial slide d-flex justify-start align-center">
@@ -286,7 +293,7 @@
         </section>
 
         <section class="video-wrapper video-bg-img">
-            <div class="container d-flex justify-start align-center">
+            <div class="d-flex justify-between align-center relative">
                 <div class="video-content-wrapper">
                     <div class="video-content">
                         <h2>WATCH THE VIDEO</h2>
@@ -315,7 +322,7 @@
                     </div>
                 </div>
                 <div class="video-src-wrapper">
-                    <!-- <video src="./"></video> -->
+                    <video poster="./_assets/_images/video-section/video-image.png" controls src="./_assets/_videos/video.mp4" type="video/mp4"></video>
                     <div class="play-btn"></div>
                 </div>
                 <img src="./_assets/_images/branding/logo.png" class="footer-logo-img" alt="">
@@ -324,7 +331,7 @@
     </main>
 
     <footer class="">
-        <div class="container d-flex justify-center align-center">
+        <div class="container d-flex justify-between align-center">
             <div class="copyright">
                 <p>@2021 Get an Intervention Inc. All rights reserved.</p>
             </div>

@@ -11,7 +11,6 @@
 @font-face {
     font-family: "montserrat-extrabold";
     src: url('../_fonts/Montserrat-ExtraBold.ttf');
-    font-display: auto;
 }
 
 :root {
@@ -53,15 +52,25 @@ body {
     margin-left: auto;
 }
 
+.video-content-wrapper{
+    padding-left: 16px;
+}
+
 @media (min-width: 576px) {
     .container {
         max-width: 540px;
+    }
+    .video-content-wrapper{
+        padding-left: 18px;
     }
 }
 
 @media (min-width: 768px) {
     .container {
         max-width: 720px;
+    }
+    .video-content-wrapper{
+        padding-left: 24px;
     }
 }
 
@@ -75,17 +84,26 @@ body {
     .d-lg-block{
         display: block;
     }
+    .video-content-wrapper{
+        padding-left: 16px;
+    }
 }
 
 @media (min-width: 1200px) {
     .container {
         max-width: 1140px;
     }
+    .video-content-wrapper{
+        padding-left: 30px;
+    }
 }
 
 @media (min-width: 1440px) {
     .container {
         max-width: 1184px;
+    }
+    .video-content-wrapper{
+        padding-left: 128px;
     }
 }
 
@@ -204,7 +222,10 @@ main{
                 font-weight: var(--fw-700);
                 line-height: 72px;
                 margin-bottom: 12px;
-                .first-line{}
+                .first-line{
+                    -webkit-text-stroke-width: 1px;
+                    -webkit-text-stroke-color: #fff;
+                }
                 .second-line{
                     display: block;
                 }
@@ -414,6 +435,7 @@ main{
 
     .we-can-organize-wrapper{
         padding-bottom: 100px;
+        padding-top: 100px;
         h2{
             font-size: var(--fs-36);
             font-weight: var(--fw-700);
@@ -481,7 +503,7 @@ main{
         }
         .video-content{
             color: #fff;
-            padding: 94px 180px 93px 0;
+            margin: 94px 0 93px 0;
             h2{
                 font-size: var(--fs-44);
                 font-weight: var(--fw-700);
@@ -499,7 +521,7 @@ main{
                 img{
                     position: absolute;
                     top: 10px;
-                    left: -30px;
+                    left: 0px;
                     z-index: 1;
                 }
                 p{
@@ -508,27 +530,49 @@ main{
                     line-height: 28px;
                 }
                 margin-bottom: 22px;
+                padding-left: 30px;
+                width: 430px;
             }
         }
         &.video-bg-img{
-            background-image: url(../_images/video-section/video-desktop.png);
+            background-image: url("../_images/video-section/video-desktop.png"), url("../_images/video-section/video-overlay-desktop.png");
             background-repeat: no-repeat;
         }
         .video-src-wrapper{
+            position: relative;
+            z-index: -1;
             video{}
             img{}
             .play-btn{}
         }
-        .footer-logo-img{}
+        .footer-logo-img{
+            position: absolute;
+            bottom: 35px;
+            right: 35px;
+        }
     }
 }
 
 footer{
+    padding: 38px 0;
+    background: var(--faded);
     .copyright{
-        p{}
+        p{
+            font-size: var(--fs-14);
+            font-weight: var(--fw-400);
+            line-height: 24px;
+            color: #757575;
+            ;
+        }
     }
     .footer-links{
-        a{}
+        a{
+            font-size: var(--fs-14);
+            font-weight: var(--fw-400);
+            line-height: 24px;
+            color: #757575;
+            text-decoration: none;
+        }
     }
 }
 

@@ -196,6 +196,10 @@ img{
                             }
                         }
                         color: #ffffffb3;
+                        &:hover a{
+                            font-weight: var(--fw-700);
+                            color: #ffffff;
+                        }
                     }  
                 }
                 .call-consult{
@@ -278,34 +282,77 @@ img{
                     .country-input{
                         width:100%;
                         margin-bottom: 0;
+                        input, select{
+                            width: 416px;
+                        }
+                        select{
+                            -webkit-appearance: none;
+                            -moz-appearance: none; 
+                            appearance: none; 
+                            background-image: none;
+                            font-size: var(--fs-16);
+                            line-height: 19.5px;
+                            option {
+                                background-color: var(--light);
+                                color: #fff;
+                                margin: 5px 5px;
+                                &:checked {
+                                    background-color: var(--medium);
+                                }
+                            }
+                        }
+                        .dropdown-arrow{
+                            position: absolute;
+                            top: 50%;
+                            right: 22px;
+                        }
                     }
                     label{
                         font-size: var(--fs-16);
                         color: #FFFFFFB2;
                         line-height: 19.5px;
                         position: absolute;
-                        top: 16px;
+                        top: 14px;
                         left: 16px;
-                        &.active{
+                        transition: all 0.3s ease-in-out;
+                        &:active{
                             color: #FFFFFF; 
                         }
+                        &.focused{
+                            font-size: var(--fs-13);
+                            line-height: 13px;
+                            padding: 0 5px;
+                            background: var(--light);
+                            top: -6px;
+                            left: 12px;
+                        }
                     }
-                    input{
-                        height: 46px;
-                        width: 100%;
+                    input, select{
+                        padding: 14px 16px 14px 16px;
+                        // height: 46px;
+                        width: 166px;
                         border: 1px solid #FFFFFF80;
                         color: #FFFFFFB2;
                         border-radius: 2px;
                         background: #FFFFFF0A;
-                        &.active{
+                        &:focus-within{
                             background: transparent;
                         }
+                        &:focus-visible{
+                            outline: none;
+                        }
+                        &.invalidddddddddd{
+                            border: 1px solid red;
+                        }
+                    }
+                    select{
+                        padding-left: 12px;
                     }
                     datalist{
                         option{}
                     }
                     button{
-                        background: #5BC8AF;
+                        background: var(--medium);
                         box-shadow: 0px 4px 6px 0px #00000014;
                         border-radius: 4px;
                         width: 221px;
@@ -318,6 +365,10 @@ img{
                         color: #fff;
                         margin-left: auto;
                         margin-right: auto;
+                        &:hover{
+                            background: #35BB9C;
+                            cursor: pointer;
+                        }
                         .form-submit-btn{
                             width: 24px;
                             height: 24px;
@@ -389,6 +440,9 @@ main{
                         color: var(--medium);
                         border: 2px solid var(--medium);
                         background: transparent;
+                        &:hover{
+                            cursor: pointer;
+                        }
                     }
                 }
             }
@@ -465,11 +519,51 @@ main{
                 }
                 &.prev {
                     left: 0;
+                    &:hover .svg-icon{
+                        background-image: url('../_images/svg/hovered-arrow-btn.svg');
+                    }
+                    .svg-icon {
+                        background-image: url('../_images/svg/left-arrow.svg');
+                        background-size: cover;
+                        display: inline-block;
+                        width: 48px;
+                        height: 48px;
+                    }
+                    
                 }
                 &.next {
                     right: 0;
+                    &:hover .svg-icon{
+                        background-image: url('../_images/svg/hovered-arrow-btn.svg');
+                        transform: rotate(180deg);
+                    }
+                    .svg-icon {
+                        background-image: url('../_images/svg/right-arrow.svg');
+                        background-size: cover;
+                        display: inline-block;
+                        width: 48px;
+                        height: 48px;
+                    }
                 }
             }
+        }
+        .counter {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        
+        .counter .dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--faded);
+            margin: 0 36px;
+            cursor: pointer;
+        }
+        
+        .counter .dot.active {
+            background-color: var(--medium);
         }
     }
 
@@ -510,6 +604,9 @@ main{
                 position: relative;
                 height: 92px;
                 cursor: pointer;
+                &:hover h3{
+                    color: var(--medium);
+                }
             }
             h3{
                 font-size: var(--fs-18);
@@ -701,6 +798,9 @@ footer{
             line-height: 24px;
             color: #757575;
             text-decoration: none;
+            &:hover{
+                font-weight: var(--fw-700);
+            }
         }
     }
 }

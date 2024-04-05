@@ -183,6 +183,10 @@ img {
   font-weight: var(--fw-700);
   color: #ffffff;
 }
+.header-banner-wrapper header nav .nav-link-wrapper .nav-links li:hover a {
+  font-weight: var(--fw-700);
+  color: #ffffff;
+}
 .header-banner-wrapper header nav .nav-link-wrapper .call-consult {
   margin-left: 46px;
 }
@@ -253,30 +257,72 @@ img {
   width: 100%;
   margin-bottom: 0;
 }
+.header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form .country-input input, .header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form .country-input select {
+  width: 416px;
+}
+.header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form .country-input select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: none;
+  font-size: var(--fs-16);
+  line-height: 19.5px;
+}
+.header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form .country-input select option {
+  background-color: var(--light);
+  color: #fff;
+  margin: 5px 5px;
+}
+.header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form .country-input select option:checked {
+  background-color: var(--medium);
+}
+.header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form .country-input .dropdown-arrow {
+  position: absolute;
+  top: 50%;
+  right: 22px;
+}
 .header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form label {
   font-size: var(--fs-16);
   color: rgba(255, 255, 255, 0.6980392157);
   line-height: 19.5px;
   position: absolute;
-  top: 16px;
+  top: 14px;
   left: 16px;
+  transition: all 0.3s ease-in-out;
 }
-.header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form label.active {
+.header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form label:active {
   color: #FFFFFF;
 }
-.header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form input {
-  height: 46px;
-  width: 100%;
+.header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form label.focused {
+  font-size: var(--fs-13);
+  line-height: 13px;
+  padding: 0 5px;
+  background: var(--light);
+  top: -6px;
+  left: 12px;
+}
+.header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form input, .header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form select {
+  padding: 14px 16px 14px 16px;
+  width: 166px;
   border: 1px solid rgba(255, 255, 255, 0.5019607843);
   color: rgba(255, 255, 255, 0.6980392157);
   border-radius: 2px;
   background: rgba(255, 255, 255, 0.0392156863);
 }
-.header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form input.active {
+.header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form input:focus-within, .header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form select:focus-within {
   background: transparent;
 }
+.header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form input:focus-visible, .header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form select:focus-visible {
+  outline: none;
+}
+.header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form input.invalidddddddddd, .header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form select.invalidddddddddd {
+  border: 1px solid red;
+}
+.header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form select {
+  padding-left: 12px;
+}
 .header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form button {
-  background: #5BC8AF;
+  background: var(--medium);
   box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.0784313725);
   border-radius: 4px;
   width: 221px;
@@ -289,6 +335,10 @@ img {
   color: #fff;
   margin-left: auto;
   margin-right: auto;
+}
+.header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form button:hover {
+  background: #35BB9C;
+  cursor: pointer;
 }
 .header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form button .form-submit-btn {
   width: 24px;
@@ -344,6 +394,9 @@ main .we-understand-wrapper .we-understand-text .we-understand-para-wrapper .we-
   color: var(--medium);
   border: 2px solid var(--medium);
   background: transparent;
+}
+main .we-understand-wrapper .we-understand-text .we-understand-para-wrapper .we-understand-para .success-rate-btn:hover {
+  cursor: pointer;
 }
 main .testimonial-wrapper {
   margin-top: -30px;
@@ -414,8 +467,45 @@ main .testimonial-wrapper .slider button img {
 main .testimonial-wrapper .slider button.prev {
   left: 0;
 }
+main .testimonial-wrapper .slider button.prev:hover .svg-icon {
+  background-image: url("../_images/svg/hovered-arrow-btn.svg");
+}
+main .testimonial-wrapper .slider button.prev .svg-icon {
+  background-image: url("../_images/svg/left-arrow.svg");
+  background-size: cover;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+}
 main .testimonial-wrapper .slider button.next {
   right: 0;
+}
+main .testimonial-wrapper .slider button.next:hover .svg-icon {
+  background-image: url("../_images/svg/hovered-arrow-btn.svg");
+  transform: rotate(180deg);
+}
+main .testimonial-wrapper .slider button.next .svg-icon {
+  background-image: url("../_images/svg/right-arrow.svg");
+  background-size: cover;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+}
+main .testimonial-wrapper .counter {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+main .testimonial-wrapper .counter .dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--faded);
+  margin: 0 36px;
+  cursor: pointer;
+}
+main .testimonial-wrapper .counter .dot.active {
+  background-color: var(--medium);
 }
 main .we-can-organize-wrapper {
   padding-bottom: 100px;
@@ -454,6 +544,9 @@ main .we-can-organize-wrapper .organize-cards-wrapper .info-card-router {
   position: relative;
   height: 92px;
   cursor: pointer;
+}
+main .we-can-organize-wrapper .organize-cards-wrapper .info-card-router:hover h3 {
+  color: var(--medium);
 }
 main .we-can-organize-wrapper .organize-cards-wrapper h3 {
   font-size: var(--fs-18);
@@ -625,4 +718,7 @@ footer .footer-links a {
   line-height: 24px;
   color: #757575;
   text-decoration: none;
+}
+footer .footer-links a:hover {
+  font-weight: var(--fw-700);
 }/*# sourceMappingURL=index.css.map */

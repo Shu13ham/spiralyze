@@ -94,15 +94,15 @@ document.querySelectorAll('.info-card-router').forEach((card) => {
   card.addEventListener('mouseover', (event) => {
     event.currentTarget.querySelector('.on-hover-para').classList.add('d-block');
     event.currentTarget.querySelector('.on-hover-para').classList.remove('d-none');
-    event.currentTarget.querySelector('.info-card-router .info-icon img').classList.add('d-block');
-    event.currentTarget.querySelector('.info-card-router .info-icon img').classList.remove('d-none');
+    event.currentTarget.querySelector('.info-card-router .info-icon').classList.add('d-block');
+    event.currentTarget.querySelector('.info-card-router .info-icon').classList.remove('d-none');
   });
 
   card.addEventListener('mouseout', (event) => {
     event.currentTarget.querySelector('.on-hover-para').classList.add('d-none');
     event.currentTarget.querySelector('.on-hover-para').classList.remove('d-block');
-    event.currentTarget.querySelector('.info-card-router .info-icon img').classList.add('d-none');
-    event.currentTarget.querySelector('.info-card-router .info-icon img').classList.remove('d-block');
+    event.currentTarget.querySelector('.info-card-router .info-icon').classList.add('d-none');
+    event.currentTarget.querySelector('.info-card-router .info-icon').classList.remove('d-block');
   });
 });
 

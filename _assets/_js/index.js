@@ -136,20 +136,76 @@ function validateForm() {
   for (var i = 0; i < elements.length; i++) {
       var element = elements[i];
       if (element.tagName === "INPUT" || element.tagName === "SELECT") {
-          if (element.hasAttribute("required") && element.value.trim() === "") {
+          if (element.hasAttribute("require") && element.value.trim() === "") {
               isValid = false;
               element.classList.add("invalid");
+              var label = document.querySelector("label[for='" + element.id + "']");
+              if (label) {
+                  label.classList.add("invalid");
+              }
           } else {
               element.classList.remove("invalid");
+              var label = document.querySelector("label[for='" + element.id + "']");
+              if (label) {
+                  label.classList.remove("invalid");
+              }
           }
       }
   }
 
-  if (isValid) {
-      // Form is valid, you can submit it
-      // form.submit();
-  } else {
+  if (!isValid) {
       // Form is invalid, do something (like show error message)
       // alert("Please fill in all required fields.");
   }
+
+  // return isValid;
 }
+
+function validateInput() {
+  var form = document.querySelector("form");
+  var elements = form.elements;
+  var isValid = true;
+
+  for (var i = 0; i < elements.length; i++) {
+      var element = elements[i];
+      if (element.tagName === "INPUT" || element.tagName === "SELECT") {
+          if (element.hasAttribute("require") && element.value.trim() === "") {
+              isValid = false;
+              var label = document.querySelector("label[for='" + element.id + "']");
+              if (label) {
+                  label.classList.remove("text-added");
+              }
+          } else {
+              var label = document.querySelector("label[for='" + element.id + "']");
+              if (label) {
+                  label.classList.add("text-added");
+              }
+          }
+      }
+  }
+}
+
+document.querySelector(".form-group input").addEventListener("input", validateInput);
+
+document.getElementById("play-btn").addEventListener("click", function() {
+  // Show popup
+  document.getElementById("yt-popup-overlay").style.display = "block";
+
+  // Generate random YouTube video ID
+  var videos = ["qcSKba5NVkw", "qcSKba5NVkw"]; // Add more video IDs as needed
+  var randomIndex = Math.floor(Math.random() * videos.length);
+  var randomVideoId = videos[randomIndex];
+
+  // Embed random video
+  var iframe = document.getElementById("youtube-video");
+  iframe.src = "https://www.youtube.com/embed/" + randomVideoId + "?autoplay=1";
+});
+
+document.getElementById("yt-popup-overlay").addEventListener("click", function() {
+  // Close popup
+  document.getElementById("yt-popup-overlay").style.display = "none";
+
+  // Stop video
+  var iframe = document.getElementById("youtube-video");
+  iframe.src = "";
+});

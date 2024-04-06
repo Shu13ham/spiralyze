@@ -11,24 +11,24 @@ let currentSlideIndex = 0;
 
 // Create dots for each slide
 slides.forEach((slide, index) => {
-  const dot = document.createElement('span');
-  dot.classList.add('dot');
+  const dot = document.createElement("span");
+  dot.classList.add("dot");
   if (index === 0) {
-      dot.classList.add('active');
+    dot.classList.add("active");
   }
-  dot.addEventListener('click', () => {
-      showSlide(index);
+  dot.addEventListener("click", () => {
+    showSlide(index);
   });
-  document.querySelector('.counter').appendChild(dot);
+  document.querySelector(".counter").appendChild(dot);
 });
 
 // Function to show slide by index
 function showSlide(index) {
   slides.forEach((slide, i) => {
     if (i === index) {
-      document.querySelector('.counter').children[i].classList.add('active');
+      document.querySelector(".counter").children[i].classList.add("active");
     } else {
-      document.querySelector('.counter').children[i].classList.remove('active');
+      document.querySelector(".counter").children[i].classList.remove("active");
     }
   });
 }
@@ -90,40 +90,62 @@ function endDrag() {
   startAutoPlay();
 }
 
-document.querySelectorAll('.info-card-router').forEach((card) => {
-  card.addEventListener('mouseover', (event) => {
-    event.currentTarget.querySelector('.on-hover-para').classList.add('d-block');
-    event.currentTarget.querySelector('.on-hover-para').classList.remove('d-none');
-    event.currentTarget.querySelector('.info-card-router .info-icon').classList.add('d-block');
-    event.currentTarget.querySelector('.info-card-router .info-icon').classList.remove('d-none');
+document.querySelectorAll(".info-card-router").forEach((card) => {
+  card.addEventListener("mouseover", (event) => {
+    event.currentTarget
+      .querySelector(".on-hover-para")
+      .classList.add("d-block");
+    event.currentTarget
+      .querySelector(".on-hover-para")
+      .classList.remove("d-none");
+    event.currentTarget
+      .querySelector(".info-card-router .info-icon")
+      .classList.add("d-block");
+    event.currentTarget
+      .querySelector(".info-card-router .info-icon")
+      .classList.remove("d-none");
   });
 
-  card.addEventListener('mouseout', (event) => {
-    event.currentTarget.querySelector('.on-hover-para').classList.add('d-none');
-    event.currentTarget.querySelector('.on-hover-para').classList.remove('d-block');
-    event.currentTarget.querySelector('.info-card-router .info-icon').classList.add('d-none');
-    event.currentTarget.querySelector('.info-card-router .info-icon').classList.remove('d-block');
+  card.addEventListener("mouseout", (event) => {
+    event.currentTarget.querySelector(".on-hover-para").classList.add("d-none");
+    event.currentTarget
+      .querySelector(".on-hover-para")
+      .classList.remove("d-block");
+    event.currentTarget
+      .querySelector(".info-card-router .info-icon")
+      .classList.add("d-none");
+    event.currentTarget
+      .querySelector(".info-card-router .info-icon")
+      .classList.remove("d-block");
   });
 });
 
-document.querySelectorAll('.banner-form form input').forEach(inputField => {
-  inputField.addEventListener('focus', () => {
+document.querySelectorAll(".banner-form form input").forEach((inputField) => {
+  inputField.addEventListener("focus", () => {
     if (document.querySelector(`label[for="${inputField.id}"]`)) {
-      document.querySelector(`label[for="${inputField.id}"]`).classList.add('focused');
+      document
+        .querySelector(`label[for="${inputField.id}"]`)
+        .classList.add("focused");
     }
     const dropdown = inputField.nextElementSibling;
     if (document.querySelector(`label[for="${dropdown.id}"]`)) {
-      document.querySelector(`label[for="${dropdown.id}"]`).classList.add('focused');
+      document
+        .querySelector(`label[for="${dropdown.id}"]`)
+        .classList.add("focused");
     }
   });
 
-  inputField.addEventListener('blur', () => {
+  inputField.addEventListener("blur", () => {
     if (document.querySelector(`label[for="${inputField.id}"]`)) {
-      document.querySelector(`label[for="${inputField.id}"]`).classList.remove('focused');
+      document
+        .querySelector(`label[for="${inputField.id}"]`)
+        .classList.remove("focused");
     }
     const dropdown = inputField.nextElementSibling;
     if (document.querySelector(`label[for="${dropdown.id}"]`)) {
-      document.querySelector(`label[for="${dropdown.id}"]`).classList.remove('focused');
+      document
+        .querySelector(`label[for="${dropdown.id}"]`)
+        .classList.remove("focused");
     }
   });
 });
@@ -134,28 +156,28 @@ function validateForm() {
   var isValid = true;
 
   for (var i = 0; i < elements.length; i++) {
-      var element = elements[i];
-      if (element.tagName === "INPUT" || element.tagName === "SELECT") {
-          if (element.hasAttribute("require") && element.value.trim() === "") {
-              isValid = false;
-              element.classList.add("invalid");
-              var label = document.querySelector("label[for='" + element.id + "']");
-              if (label) {
-                  label.classList.add("invalid");
-              }
-          } else {
-              element.classList.remove("invalid");
-              var label = document.querySelector("label[for='" + element.id + "']");
-              if (label) {
-                  label.classList.remove("invalid");
-              }
-          }
+    var element = elements[i];
+    if (element.tagName === "INPUT" || element.tagName === "SELECT") {
+      if (element.hasAttribute("require") && element.value.trim() === "") {
+        isValid = false;
+        element.classList.add("invalid");
+        var label = document.querySelector("label[for='" + element.id + "']");
+        if (label) {
+          label.classList.add("invalid");
+        }
+      } else {
+        element.classList.remove("invalid");
+        var label = document.querySelector("label[for='" + element.id + "']");
+        if (label) {
+          label.classList.remove("invalid");
+        }
       }
+    }
   }
 
   if (!isValid) {
-      // Form is invalid, do something (like show error message)
-      // alert("Please fill in all required fields.");
+    // Form is invalid, do something (like show error message)
+    // alert("Please fill in all required fields.");
   }
 
   // return isValid;
@@ -167,27 +189,29 @@ function validateInput() {
   var isValid = true;
 
   for (var i = 0; i < elements.length; i++) {
-      var element = elements[i];
-      if (element.tagName === "INPUT" || element.tagName === "SELECT") {
-          if (element.hasAttribute("require") && element.value.trim() === "") {
-              isValid = false;
-              var label = document.querySelector("label[for='" + element.id + "']");
-              if (label) {
-                  label.classList.remove("text-added");
-              }
-          } else {
-              var label = document.querySelector("label[for='" + element.id + "']");
-              if (label) {
-                  label.classList.add("text-added");
-              }
-          }
+    var element = elements[i];
+    if (element.tagName === "INPUT" || element.tagName === "SELECT") {
+      if (element.hasAttribute("require") && element.value.trim() === "") {
+        isValid = false;
+        var label = document.querySelector("label[for='" + element.id + "']");
+        if (label) {
+          label.classList.remove("text-added");
+        }
+      } else {
+        var label = document.querySelector("label[for='" + element.id + "']");
+        if (label) {
+          label.classList.add("text-added");
+        }
       }
+    }
   }
 }
 
-document.querySelector(".form-group input").addEventListener("input", validateInput);
+document
+  .querySelector(".form-group input")
+  .addEventListener("input", validateInput);
 
-document.getElementById("play-btn").addEventListener("click", function() {
+document.getElementById("play-btn").addEventListener("click", function () {
   // Show popup
   document.getElementById("yt-popup-overlay").style.display = "block";
 
@@ -201,11 +225,13 @@ document.getElementById("play-btn").addEventListener("click", function() {
   iframe.src = "https://www.youtube.com/embed/" + randomVideoId + "?autoplay=1";
 });
 
-document.getElementById("yt-popup-overlay").addEventListener("click", function() {
-  // Close popup
-  document.getElementById("yt-popup-overlay").style.display = "none";
+document
+  .getElementById("yt-popup-overlay")
+  .addEventListener("click", function () {
+    // Close popup
+    document.getElementById("yt-popup-overlay").style.display = "none";
 
-  // Stop video
-  var iframe = document.getElementById("youtube-video");
-  iframe.src = "";
-});
+    // Stop video
+    var iframe = document.getElementById("youtube-video");
+    iframe.src = "";
+  });

@@ -38,9 +38,9 @@
                         </div>
                     </div>
                     <div class="navbar-mobile-wrapper d-none">
-                        <button class="">X</button>
+                        <button class="close-icon">X</button>
                         <ul class="nav-links">
-                            <li class="">HOME</li>
+                            <li class=""><a href="#" class="active">HOME</a></li>
                             <li class=""><a href="#">ABOUT</a></li>
                             <li class=""><a href="#">CONTACT</a></li>
                         </ul>
@@ -114,6 +114,9 @@
             <div class="banner-overlay-tab">
                 <img src="./_assets/_images/banner-section/banner-overlay-tab.png" alt="">
             </div>
+            <div class="banner-overlay-mobile">
+                <img src="./_assets/_images/banner-section/banner-overlay-mobile.png" alt="">
+            </div>
         </section>
     </div>
 
@@ -136,7 +139,7 @@
                                 purpose can become problematic as people age.  Engaging them in leisure 
                                 activities and volunteer work is important.
                                 <span class="desktop-hide">
-                                    <br><br>Older adults want to stay active and contribute to society in a 
+                                    <br>Older adults want to stay active and contribute to society in a 
                                     reciprocal manner (meaning that they want to exchange their services 
                                     and skills with others for the mutual benefit of the neighborhood or community).
                                 </span>
@@ -347,48 +350,52 @@
         </section>
 
         <section class="video-wrapper video-bg-img">
-            <div class="video-container d-flex justify-between align-start relative">
-                <div class="video-content-wrapper">
-                    <div class="video-content">
-                        <h2>WATCH THE VIDEO</h2>
-                        <div class="video-bullet-points">
-                            <img src="./_assets/_images/svg/checkmark.svg" height="13.4" alt="">
-                            <h3>Needs Assessment</h3>
-                            <p>
-                                The Advocacy Evaluation Toolkit contains the instruments used to collect data 
-                                for evaluating the Consumer Voices for Coverage program. 
-                            </p>
-                        </div>
-                        <div class="video-bullet-points">
-                            <img src="./_assets/_images/svg/checkmark.svg" height="13.4" alt="">
-                            <h3>Insurance Advocacy</h3>
-                            <p>
-                                We are committed to advocating for appropriate coverage and payment policies.
-                            </p>
-                        </div>
-                        <div class="video-bullet-points">
-                            <img src="./_assets/_images/svg/checkmark.svg" height="13.4" alt="">
-                            <h3>Treatment Planning & Placement</h3>
-                            <p>
-                                Patients can better understand medical procedures, discharge instructions, etc.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="video-src-wrapper">
-                    <video poster="./_assets/_images/video-section/video-image.png" width="749" height="648"controls src="./_assets/_videos/video.mp4" type="video/mp4" class="video-src"></video>
-                    <div class="play-btn">
-                        <img  class="outer-ellipse" src="./_assets/_images/svg/outer-ellipse.svg" alt="">
-                        <div>
-                            <img  class="inner-ellipse" src="./_assets/_images/svg/ellipse.svg" alt="">
-                            <div>
-                                <img  class="play" src="./_assets/_images/svg/play-btn.svg" alt="">
+            <section class="video-bg-img2">
+                <section class="video-bg-img3">
+                    <div class="container video-container d-flex justify-between align-start relative">
+                        <div class="video-content-wrapper">
+                            <div class="video-content">
+                                <h2>WATCH THE VIDEO</h2>
+                                <div class="video-bullet-points">
+                                    <img src="./_assets/_images/svg/checkmark.svg" height="13.4" alt="">
+                                    <h3>Needs Assessment</h3>
+                                    <p>
+                                        The Advocacy Evaluation Toolkit contains the instruments used to collect data 
+                                        for evaluating the Consumer Voices for Coverage program. 
+                                    </p>
+                                </div>
+                                <div class="video-bullet-points">
+                                    <img src="./_assets/_images/svg/checkmark.svg" height="13.4" alt="">
+                                    <h3>Insurance Advocacy</h3>
+                                    <p>
+                                        We are committed to advocating for appropriate coverage and payment policies.
+                                    </p>
+                                </div>
+                                <div class="video-bullet-points">
+                                    <img src="./_assets/_images/svg/checkmark.svg" height="13.4" alt="">
+                                    <h3>Treatment Planning & Placement</h3>
+                                    <p>
+                                        Patients can better understand medical procedures, discharge instructions, etc.
+                                    </p>
+                                </div>
                             </div>
                         </div>
+                        <div class="video-src-wrapper">
+                            <!-- <video poster="./_assets/_images/video-section/video-image.png" width="749" height="648"controls src="./_assets/_videos/video.mp4" type="video/mp4" class="video-src"></video> -->
+                            <div class="play-btn">
+                                <img  class="outer-ellipse" src="./_assets/_images/svg/outer-ellipse.svg" alt="">
+                                <div>
+                                    <img  class="inner-ellipse" src="./_assets/_images/svg/ellipse.svg" alt="">
+                                    <div>
+                                        <img  class="play" src="./_assets/_images/svg/play-btn.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="./_assets/_images/branding/logo.png" class="footer-logo-img" alt="">
                     </div>
-                </div>
-                <img src="./_assets/_images/branding/logo.png" class="footer-logo-img" alt="">
-            </div>
+                </section>
+            </section>
         </section>
     </main>
 
@@ -405,11 +412,11 @@
         </div>
     </footer>
 
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", function () {
-            const hamburgerIcon = document.querySelector(".hamburger-icon");
+            const hamburgerIcon = document.querySelector(".hamburger-btn");
             const crossIcon = document.querySelector(".close-icon");
-            const navbarMobile = document.querySelector(".navbar-mobile");
+            const navbarMobile = document.querySelector(".navbar-mobile-wrapper");
 
             hamburgerIcon.addEventListener("click", function () {
                 hamburgerIcon.style.display == "none";
@@ -421,7 +428,7 @@
                 navbarMobile.style.display = "none";
             });
         });
-    </script> -->
+    </script>
     <script src="./_assets/_js/index.js"></script>
 
 </body>

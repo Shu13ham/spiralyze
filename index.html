@@ -68,7 +68,7 @@
               <div class="form-group">
                 <div class="relative">
                   <label for="fname">First name</label>
-                  <input type="text" id="fname" name="fname" value="" />
+                  <input require type="text" id="fname" name="fname" value="" />
                   <div class="invalid-popup d-none">
                     This field can’t be empty. Please fill it in.
                     <img src="./_assets/_images/svg/red-polygon.svg" alt="Spiralyze" />
@@ -76,7 +76,7 @@
                 </div>
                 <div class="relative">
                   <label for="lname">Last name</label>
-                  <input type="text" id="lname" name="lname" value="" />
+                  <input require type="text" id="lname" name="lname" value="" />
                   <div class="invalid-popup d-none">
                     This field can’t be empty. Please fill it in.
                     <img loading="lazy" src="./_assets/_images/svg/red-polygon.svg" alt="Spiralyze" />
@@ -84,7 +84,7 @@
                 </div>
                 <div class="relative">
                   <label for="email">Business Email</label>
-                  <input type="email" id="email" name="email" value="" />
+                  <input require type="email" id="email" name="email" value="" />
                   <div class="invalid-popup d-none">
                     This field can’t be empty. Please fill it in.
                     <img loading="lazy" src="./_assets/_images/svg/red-polygon.svg" alt="Spiralyze" />
@@ -92,7 +92,7 @@
                 </div>
                 <div class="relative">
                   <label for="cname">Company</label>
-                  <input type="text" id="cname" name="cname" value="" />
+                  <input require type="text" id="cname" name="cname" value="" />
                   <div class="invalid-popup d-none">
                     This field can’t be empty. Please fill it in.
                     <img loading="lazy" src="./_assets/_images/svg/red-polygon.svg" alt="Spiralyze" />
@@ -100,9 +100,7 @@
                 </div>
               </div>
               <div class="relative country-input">
-                <!-- <label for="country">Country</label> -->
-                <!-- <input list="country" name="country" value=""> -->
-                <select id="country">
+                <select require id="country">
                   <option value="" disabled selected hidden>Country</option>
                   <option value="India">India</option>
                   <option value="India">Australia</option>
@@ -117,7 +115,7 @@
                 <img loading="lazy" class="dropdown-arrow" src="./_assets/_images/svg/dropdown-arrow.svg"
                   alt="Spiralyze" />
               </div>
-              <button type="submit" value="Submit" class="d-flex justify-center align-center" onclick="validateForm()">
+              <button type="submit" value="Submit" class="d-flex justify-center align-center">
                 <img loading="lazy" src="./_assets/_images/svg/share-arrow.svg" alt="Spiralyze"
                   class="form-submit-btn" />
                 Submit
@@ -419,7 +417,6 @@
               </div>
             </div>
             <div class="video-src-wrapper">
-              <!-- <video poster="./_assets/_images/video-section/video-image.png" width="749" height="648"controls src="./_assets/_videos/video.mp4" type="video/mp4" class="video-src"></video> -->
               <div class="play-btn" id="play-btn">
                 <img loading="lazy" class="outer-ellipse" src="./_assets/_images/svg/outer-ellipse.svg"
                   alt="Spiralyze" />
@@ -456,24 +453,7 @@
       </div>
     </div>
   </footer>
-
-  <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", function () {
-      const hamburgerIcon = document.querySelector(".hamburger-btn");
-      const crossIcon = document.querySelector(".close-icon");
-      const navbarMobile = document.querySelector(".navbar-mobile-wrapper");
-
-      hamburgerIcon.addEventListener("click", function () {
-        hamburgerIcon.style.display == "none";
-        navbarMobile.style.display = "block";
-      });
-
-      crossIcon.addEventListener("click", function () {
-        hamburgerIcon.style.display == "block";
-        navbarMobile.style.display = "none";
-      });
-    });
-  </script>
+  
   <script src="./_assets/_js/index.js"></script>
 </body>
 

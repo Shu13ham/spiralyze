@@ -299,12 +299,15 @@ img {
   left: 12px;
   color: #fff;
 }
+.header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form label.focused ~ .invalid-popup, .header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form label.text-added ~ .invalid-popup {
+  display: none !important;
+}
 .header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form label.invalid {
   color: red;
 }
 .header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form input,
 .header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form select {
-  padding: 14px 21px 16px 16px;
+  padding: 14px 13px 16px 16px;
   max-width: -webkit-fill-available;
   border: 1px solid rgba(255, 255, 255, 0.5019607843);
   color: rgba(255, 255, 255, 0.6980392157);
@@ -326,6 +329,10 @@ img {
 .header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form input.invalid + .invalid-popup,
 .header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form select.invalid + .invalid-popup {
   display: block;
+}
+.header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form input + label,
+.header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form select + label {
+  color: red;
 }
 .header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form select {
   padding-left: 12px;

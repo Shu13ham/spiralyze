@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // JavaScript for slider functionality
+  //Slider
   let currentSlide = 0;
   const slides = document.querySelectorAll(".testimonial.slide");
   const totalSlides = slides.length;
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let startX = 0;
   let endX = 0;
 
-  // Create dots for each slide
+  //One dot for each slide
   slides.forEach((slide, index) => {
     const dot = document.createElement("span");
     dot.classList.add("dot");
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".counter").appendChild(dot);
   });
 
-  // Function to show slide by index
+  //Show slide by index
   function showSlide(index) {
     slides.forEach((slide, i) => {
       if (i === index) {
@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     moveSlide(index);
   }
 
+  //use transform for slides
   function moveSlide(index) {
     const slideOffset = -index * slideWidth;
     document.querySelector(".slides").style.transform = `translateX(${slideOffset}px)`;
@@ -50,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector(".prev").addEventListener("click", prevSlide);
   document.querySelector(".next").addEventListener("click", nextSlide);
 
+  //Drag functionality for touch screens
   function startDrag(event) {
     startX = event.touches[0].clientX;
   }
@@ -72,144 +74,121 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector(".slides").addEventListener("touchstart", startDrag);
   document.querySelector(".slides").addEventListener("touchmove", drag);
   document.querySelector(".slides").addEventListener("touchend", endDrag);
+
+  //Video Player Section
+  document.querySelector("#play-btn").addEventListener("click", function () {
+    document.querySelector("#yt-popup-overlay").style.display = "block";
+    var iframe = document.querySelector("#youtube-video");
+    iframe.src = "https://www.youtube.com/embed/qcSKba5NVkw?autoplay=1";
+  });
+  
+  document.querySelector("#yt-popup-overlay").addEventListener("click", function () {
+    document.querySelector("#yt-popup-overlay").style.display = "none";
+    var iframe = document.querySelector("#youtube-video");
+    iframe.src = "";
+  });
+
+  //Hover effect on the cards
+  document.querySelectorAll(".info-card-router").forEach((card) => {
+    card.addEventListener("mouseover", (event) => {
+      event.currentTarget.querySelector(".on-hover-para").classList.add("d-block");
+      event.currentTarget.querySelector(".on-hover-para").classList.remove("d-none");
+      event.currentTarget.querySelector(".info-card-router .info-icon").classList.add("d-block");
+      event.currentTarget.querySelector(".info-card-router .info-icon").classList.remove("d-none");
+    });
+
+    card.addEventListener("mouseout", (event) => {
+      event.currentTarget.querySelector(".on-hover-para").classList.add("d-none");
+      event.currentTarget.querySelector(".on-hover-para").classList.remove("d-block");
+      event.currentTarget.querySelector(".info-card-router .info-icon").classList.add("d-none");
+      event.currentTarget.querySelector(".info-card-router .info-icon").classList.remove("d-block");
+    });
+  });
+
+  document.querySelectorAll(".banner-form form input").forEach((inputField) => {
+    inputField.addEventListener("focus", () => {
+      if (document.querySelector(`label[for="${inputField.id}"]`)) {
+        document
+          .querySelector(`label[for="${inputField.id}"]`)
+          .classList.add("focused");
+      }
+      const dropdown = inputField.nextElementSibling;
+      if (document.querySelector(`label[for="${dropdown.id}"]`)) {
+        document
+          .querySelector(`label[for="${dropdown.id}"]`)
+          .classList.add("focused");
+      }
+    });
+
+    inputField.addEventListener("blur", () => {
+      if (document.querySelector(`label[for="${inputField.id}"]`)) {
+        document
+          .querySelector(`label[for="${inputField.id}"]`)
+          .classList.remove("focused");
+      }
+      const dropdown = inputField.nextElementSibling;
+      if (document.querySelector(`label[for="${dropdown.id}"]`)) {
+        document
+          .querySelector(`label[for="${dropdown.id}"]`)
+          .classList.remove("focused");
+      }
+    });
+  });
+
+  //For styling the label when user inputs text in input elements
+  function validateInput() {
+    var inputs = document.querySelectorAll(".form-group input");
+    inputs.forEach(function(input) {
+        var label = document.querySelector("label[for='" + input.id + "']");
+        if (input.value.trim() === "") {
+            label.classList.remove("text-added");
+        } else {
+            label.classList.add("text-added");
+        }
+    });
+  }
+
+  document.querySelectorAll(".form-group input").forEach(function(input) {
+    input.addEventListener("input", validateInput);
+  });
+
 });
 
-document.querySelectorAll(".info-card-router").forEach((card) => {
-  card.addEventListener("mouseover", (event) => {
-    event.currentTarget
-      .querySelector(".on-hover-para")
-      .classList.add("d-block");
-    event.currentTarget
-      .querySelector(".on-hover-para")
-      .classList.remove("d-none");
-    event.currentTarget
-      .querySelector(".info-card-router .info-icon")
-      .classList.add("d-block");
-    event.currentTarget
-      .querySelector(".info-card-router .info-icon")
-      .classList.remove("d-none");
-  });
-
-  card.addEventListener("mouseout", (event) => {
-    event.currentTarget.querySelector(".on-hover-para").classList.add("d-none");
-    event.currentTarget
-      .querySelector(".on-hover-para")
-      .classList.remove("d-block");
-    event.currentTarget
-      .querySelector(".info-card-router .info-icon")
-      .classList.add("d-none");
-    event.currentTarget
-      .querySelector(".info-card-router .info-icon")
-      .classList.remove("d-block");
-  });
-});
-
-document.querySelectorAll(".banner-form form input").forEach((inputField) => {
-  inputField.addEventListener("focus", () => {
-    if (document.querySelector(`label[for="${inputField.id}"]`)) {
-      document
-        .querySelector(`label[for="${inputField.id}"]`)
-        .classList.add("focused");
-    }
-    const dropdown = inputField.nextElementSibling;
-    if (document.querySelector(`label[for="${dropdown.id}"]`)) {
-      document
-        .querySelector(`label[for="${dropdown.id}"]`)
-        .classList.add("focused");
-    }
-  });
-
-  inputField.addEventListener("blur", () => {
-    if (document.querySelector(`label[for="${inputField.id}"]`)) {
-      document
-        .querySelector(`label[for="${inputField.id}"]`)
-        .classList.remove("focused");
-    }
-    const dropdown = inputField.nextElementSibling;
-    if (document.querySelector(`label[for="${dropdown.id}"]`)) {
-      document
-        .querySelector(`label[for="${dropdown.id}"]`)
-        .classList.remove("focused");
-    }
-  });
-});
-
-function validateForm() {
-  var form = document.querySelector("form");
+//Form validation and label styling for errors
+function validateForm(event) {
+  var form = document.getElementById("my-form");
   var elements = form.elements;
   var isValid = true;
 
   for (var i = 0; i < elements.length; i++) {
-    var element = elements[i];
-    if (element.tagName === "INPUT" || element.tagName === "SELECT") {
-      if (element.hasAttribute("require") && element.value.trim() === "") {
-        isValid = false;
-        element.classList.add("invalid");
-        var label = document.querySelector("label[for='" + element.id + "']");
-        if (label) {
-          label.classList.add("invalid");
-        }
-      } else {
-        element.classList.remove("invalid");
-        var label = document.querySelector("label[for='" + element.id + "']");
-        if (label) {
-          label.classList.remove("invalid");
-        }
+      var element = elements[i];
+      if (element.tagName === "INPUT" || element.tagName === "SELECT") {
+          if (element.value.trim() === "") {
+              isValid = false;
+              element.classList.add("invalid");
+              var errorPopup = element.nextElementSibling;
+              errorPopup.classList.remove("d-none"); 
+              var label = document.querySelector("label[for='" + element.id + "']");
+              if (label) {
+                label.classList.add("invalid");
+              }
+          } else {
+              element.classList.remove("invalid");
+              var errorPopup = element.nextElementSibling;
+              errorPopup.classList.add("d-none"); 
+              var label = document.querySelector("label[for='" + element.id + "']");
+              if (label) {
+                label.classList.remove("invalid");
+              }
+          }
       }
-    }
   }
 
   if (!isValid) {
-    event.preventDefault();
-  }
-
-  return isValid;
-}
-
-function submitForm() {
-  if (validateForm()) {
-      document.querySelector('#my-form').submit();
+      event.preventDefault();
   }
 }
 
-document.querySelector('#my-form').addEventListener('submit', function(event) {
-  event.preventDefault();
-  submitForm();
-});
-
-function validateInput() {
-  var form = document.querySelector("form");
-  var elements = form.elements;
-  var isValid = true;
-  for (var i = 0; i < elements.length; i++) {
-    var element = elements[i];
-    if (element.tagName === "INPUT" || element.tagName === "SELECT") {
-      if (element.value.trim() === "") {
-        isValid = false;
-        var label = document.querySelector("label[for='" + element.id + "']");
-        if (label) {
-          label.classList.remove("text-added");
-        }
-      } else {
-        var label = document.querySelector("label[for='" + element.id + "']");
-        if (label) {
-          label.classList.add("text-added");
-        }
-      }
-    }
-  }
-}
-
-document.querySelector(".form-group input").addEventListener("input", validateInput);
-
-document.querySelector("#play-btn").addEventListener("click", function () {
-  document.querySelector("#yt-popup-overlay").style.display = "block";
-  var iframe = document.querySelector("#youtube-video");
-  iframe.src = "https://www.youtube.com/embed/qcSKba5NVkw?autoplay=1";
-});
-
-document.querySelector("#yt-popup-overlay").addEventListener("click", function () {
-  document.querySelector("#yt-popup-overlay").style.display = "none";
-  var iframe = document.querySelector("#youtube-video");
-  iframe.src = "";
+document.getElementById("my-form").addEventListener("submit", function(event) {
+  validateForm(event);
 });

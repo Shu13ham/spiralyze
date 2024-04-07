@@ -1,4 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
+  //Hamburger icon for mobile
+  const hamburgerIcon = document.querySelector(".hamburger-btn");
+  const crossIcon = document.querySelector(".close-icon");
+  const navbarMobile = document.querySelector(".navbar-mobile-wrapper");
+
+  hamburgerIcon.addEventListener("click", function () {
+    hamburgerIcon.style.display == "none";
+    navbarMobile.style.display = "block";
+  });
+
+  crossIcon.addEventListener("click", function () {
+    hamburgerIcon.style.display == "block";
+    navbarMobile.style.display = "none";
+  });
+
   //Slider
   let currentSlide = 0;
   const slides = document.querySelectorAll(".testimonial.slide");

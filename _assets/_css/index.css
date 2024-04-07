@@ -864,6 +864,29 @@ footer .footer-links a:hover {
 .success-page {
   position: relative;
 }
+.success-page a {
+  text-decoration: none;
+}
+.success-page .back-btn {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  background: #99cbc1;
+  color: #333333;
+  padding: 10px 30px;
+  border-radius: 4px;
+  border: none;
+  display: flex;
+  align-items: center;
+  font-size: var(--fs-14);
+  font-weight: 800;
+  cursor: pointer;
+}
+.success-page .back-btn img {
+  width: 20px;
+  height: auto;
+  margin-right: 5px;
+}
 .success-page .card {
   width: 50%;
   box-shadow: 5px 5px 15px grey;
@@ -1488,6 +1511,10 @@ footer .footer-links a:hover {
   footer .container .footer-links a {
     font-size: 12px;
     line-height: 22px;
+  }
+  .success-page .back-btn {
+    top: 15px;
+    left: 15px;
   }
   .success-page .card {
     width: 75%;

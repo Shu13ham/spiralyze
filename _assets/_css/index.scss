@@ -37,7 +37,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat-regular", sans-serif;
+  // font-family: "Montserrat-regular", sans-serif;
 }
 
 body {
@@ -205,6 +205,7 @@ img {
     .banner-intro {
       width: 50%;
       h1 {
+        font-family: "Montserrat-extrabold", sans-serif;
         font-size: var(--fs-64);
         font-weight: var(--fw-700);
         line-height: 72px;
@@ -213,6 +214,7 @@ img {
         .first-line {
           -webkit-text-stroke-width: 1px;
           -webkit-text-stroke-color: #fff;
+          color: transparent;
         }
         .second-line {
           display: block;
@@ -356,10 +358,6 @@ img {
           select {
             padding-left: 12px;
           }
-          datalist {
-            option {
-            }
-          }
           button {
             background: var(--medium);
             box-shadow: 0px 4px 6px 0px #00000014;
@@ -452,11 +450,17 @@ main {
     }
     .we-understand-text {
       .about-heading {
+        font-family: "Montserrat-extrabold", sans-serif;
         font-size: var(--fs-36);
         font-weight: var(--fw-700);
         line-height: 46px;
         margin-top: 64px;
         margin-bottom: 32px;
+        .first-line {
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: #333;
+          color: transparent;
+        }
       }
       .we-understand-para-wrapper {
         .we-understand-para {
@@ -506,6 +510,7 @@ main {
             img {
               margin-right: 36px;
               border-radius: 8px 0 0 8px;
+              box-shadow: 0px 10px 30px 0px #0000001F;
             }
           }
           .comment {
@@ -612,10 +617,16 @@ main {
     padding-bottom: 100px;
     padding-top: 100px;
     h2 {
+      font-family: "Montserrat-extrabold", sans-serif;
       font-size: var(--fs-36);
       font-weight: var(--fw-700);
       line-height: 46px;
       margin-bottom: 32px;
+      .first-line {
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #333;
+        color: transparent;
+      }
     }
     .organize-para-wrapper {
       margin-bottom: 36px;
@@ -629,12 +640,13 @@ main {
           margin-right: 36px;
         }
         .interventions-para {
+          
           font-size: var(--fs-18);
           font-weight: var(--fw-400);
           line-height: 28px;
           font-style: italic;
           span {
-            font-weight: 800;
+            font-family: "Montserrat-extrabold", sans-serif;
           }
         }
       }
@@ -667,9 +679,9 @@ main {
         height: 24px;
         margin-left: 10px;
         position: absolute;
-        top: 50%;
+        top: 55%;
         transform: translateY(-50%);
-        right: -30px;
+        right: 5px;
       }
     }
     .organize-para-mobile {
@@ -717,10 +729,16 @@ main {
       color: #fff;
       padding: 94px 0 94px 0;
       h2 {
+        font-family: "Montserrat-extrabold", sans-serif;
         font-size: var(--fs-44);
         font-weight: var(--fw-700);
         line-height: 52px;
         margin-bottom: 48px;
+        .first-line {
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: #fff;
+          color: transparent;
+        }
       }
       .video-bullet-points {
         width: 430px;
@@ -1372,30 +1390,33 @@ footer {
             background: none;
             border: none;
             position: absolute;
-            top: 5px;
-            right: 20px;
+            top: 0;
+            right: 0;
             color: #fff;
             font-weight: var(--fw-700);
           }
           .nav-links {
             position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 100%;
+            top: 35%;
+            left: 50%;
+            right: 50%;
+            transform: translate(-50%);
+            width: 90%;
             text-align: center;
             background: var(--light);
-            padding: 50px 0;
+            padding: 25px 0;
             border-radius: 8px;
             li {
-              font-size: var(--fs-18);
+              font-size: var(--fs-16);
               line-height: 25px;
               padding: 20px;
               list-style-type: none;
               a {
                 text-decoration: none;
-                color: #fff;
+                color: #ffffffb7;
                 &.active {
                   font-weight: var(--fw-700);
+                  color: #fff;
                 }
               }
             }
@@ -1635,18 +1656,18 @@ footer {
       .video-bg-img2 {
         background-image: url("../_images/video-section/video-overlay-mobile.png");
         background-repeat: no-repeat;
-        background-size: 100% 77%;
+        background-size: 100% 78%;
       }
       .video-bg-img3 {
         background-image: url("../_images/video-section/video-mobile.png");
         background-repeat: no-repeat;
-        background-size: 100% 74%;
+        background-size: 100% 75%;
       }
       &.video-bg-img {
         background-image: url("../_images/video-section/video-mobile-thumbnail.png");
         background-repeat: no-repeat;
         background-position: bottom;
-        background-size: 100% 32%;
+        background-size: 100% 31%;
       }
       .footer-logo-img {
         // bottom: 24px;
@@ -1656,41 +1677,41 @@ footer {
       }
       .video-src-wrapper {
         // width: 100%;
-        height: 280px;
+        height: 304px;
         .video-src {
           // width: 100%;
           // object-fit: cover;
         }
         .play-btn {
-          // width: 200px;
-          // height: 200px;
-          // top: 11%;
+          width: 128px;
+          height: 128px;
+          top: 20%;
           .outer-ellipse {
-            // width: 200px;
-            // height: 200px;
+            width: 128px;
+            height: 128px;
           }
           .inner-ellipse {
-            // width: 154.5px;
-            // height: 154.5px;
+            width: 98.5px;
+            height: 98.5px;
           }
           .play {
-            // width: 49.5px;
-            // height: 43.5px;
+            width: 31.5px;
+            height: 27.5px;
           }
           &:hover {
-            // width: 220px;
-            // height: 220px;
+            width: 148px;
+            height: 148px;
             .outer-ellipse {
-              // width: 228px;
-              // height: 228px;
+              width: 148px;
+              height: 148px;
             }
             .inner-ellipse {
-              // width: 194.5px;
-              // height: 194.5px;
+              width: 124.5px;
+              height: 124.5px;
             }
             .play {
-              // width: 59px;
-              // height: 54px;
+              width: 35px;
+              height: 32px;
             }
           }
         }

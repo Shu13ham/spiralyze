@@ -36,7 +36,6 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat-regular", sans-serif;
 }
 
 body {
@@ -185,6 +184,7 @@ img {
   width: 50%;
 }
 .header-banner-wrapper .banner-wrapper .banner-intro h1 {
+  font-family: "Montserrat-extrabold", sans-serif;
   font-size: var(--fs-64);
   font-weight: var(--fw-700);
   line-height: 72px;
@@ -194,6 +194,7 @@ img {
 .header-banner-wrapper .banner-wrapper .banner-intro h1 .first-line {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #fff;
+  color: transparent;
 }
 .header-banner-wrapper .banner-wrapper .banner-intro h1 .second-line {
   display: block;
@@ -414,11 +415,17 @@ main .we-understand-wrapper .we-understand-images img {
   height: auto;
 }
 main .we-understand-wrapper .we-understand-text .about-heading {
+  font-family: "Montserrat-extrabold", sans-serif;
   font-size: var(--fs-36);
   font-weight: var(--fw-700);
   line-height: 46px;
   margin-top: 64px;
   margin-bottom: 32px;
+}
+main .we-understand-wrapper .we-understand-text .about-heading .first-line {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #333;
+  color: transparent;
 }
 main .we-understand-wrapper .we-understand-text .we-understand-para-wrapper .we-understand-para {
   font-size: var(--fs-14);
@@ -463,6 +470,7 @@ main .testimonial-wrapper .slider .slides {
 main .testimonial-wrapper .slider .slides .testimonial .image img {
   margin-right: 36px;
   border-radius: 8px 0 0 8px;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1215686275);
 }
 main .testimonial-wrapper .slider .slides .testimonial .comment {
   background: var(--dark);
@@ -561,10 +569,16 @@ main .we-can-organize-wrapper {
   padding-top: 100px;
 }
 main .we-can-organize-wrapper h2 {
+  font-family: "Montserrat-extrabold", sans-serif;
   font-size: var(--fs-36);
   font-weight: var(--fw-700);
   line-height: 46px;
   margin-bottom: 32px;
+}
+main .we-can-organize-wrapper h2 .first-line {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #333;
+  color: transparent;
 }
 main .we-can-organize-wrapper .organize-para-wrapper {
   margin-bottom: 36px;
@@ -585,7 +599,7 @@ main .we-can-organize-wrapper .organize-para-wrapper .organize-para .interventio
   font-style: italic;
 }
 main .we-can-organize-wrapper .organize-para-wrapper .organize-para .interventions-para span {
-  font-weight: 800;
+  font-family: "Montserrat-extrabold", sans-serif;
 }
 main .we-can-organize-wrapper .organize-cards-wrapper .info-card-router {
   width: 100%;
@@ -613,9 +627,9 @@ main .we-can-organize-wrapper .organize-cards-wrapper .info-icon {
   height: 24px;
   margin-left: 10px;
   position: absolute;
-  top: 50%;
+  top: 55%;
   transform: translateY(-50%);
-  right: -30px;
+  right: 5px;
 }
 main .we-can-organize-wrapper .organize-para-mobile {
   display: none;
@@ -657,10 +671,16 @@ main .video-wrapper .video-content {
   padding: 94px 0 94px 0;
 }
 main .video-wrapper .video-content h2 {
+  font-family: "Montserrat-extrabold", sans-serif;
   font-size: var(--fs-44);
   font-weight: var(--fw-700);
   line-height: 52px;
   margin-bottom: 48px;
+}
+main .video-wrapper .video-content h2 .first-line {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
+  color: transparent;
 }
 main .video-wrapper .video-content .video-bullet-points {
   width: 430px;
@@ -1161,33 +1181,36 @@ footer .footer-links a:hover {
     background: none;
     border: none;
     position: absolute;
-    top: 5px;
-    right: 20px;
+    top: 0;
+    right: 0;
     color: #fff;
     font-weight: var(--fw-700);
   }
   .header-banner-wrapper header nav .navbar-mobile-wrapper .nav-links {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
+    top: 35%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%);
+    width: 90%;
     text-align: center;
     background: var(--light);
-    padding: 50px 0;
+    padding: 25px 0;
     border-radius: 8px;
   }
   .header-banner-wrapper header nav .navbar-mobile-wrapper .nav-links li {
-    font-size: var(--fs-18);
+    font-size: var(--fs-16);
     line-height: 25px;
     padding: 20px;
     list-style-type: none;
   }
   .header-banner-wrapper header nav .navbar-mobile-wrapper .nav-links li a {
     text-decoration: none;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.7176470588);
   }
   .header-banner-wrapper header nav .navbar-mobile-wrapper .nav-links li a.active {
     font-weight: var(--fw-700);
+    color: #fff;
   }
   .header-banner-wrapper .banner-wrapper {
     padding-top: 44px;
@@ -1394,21 +1417,54 @@ footer .footer-links a:hover {
   main .video-wrapper .video-bg-img2 {
     background-image: url("../_images/video-section/video-overlay-mobile.png");
     background-repeat: no-repeat;
-    background-size: 100% 77%;
+    background-size: 100% 78%;
   }
   main .video-wrapper .video-bg-img3 {
     background-image: url("../_images/video-section/video-mobile.png");
     background-repeat: no-repeat;
-    background-size: 100% 74%;
+    background-size: 100% 75%;
   }
   main .video-wrapper.video-bg-img {
     background-image: url("../_images/video-section/video-mobile-thumbnail.png");
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: 100% 32%;
+    background-size: 100% 31%;
   }
   main .video-wrapper .video-src-wrapper {
-    height: 280px;
+    height: 304px;
+  }
+  main .video-wrapper .video-src-wrapper .play-btn {
+    width: 128px;
+    height: 128px;
+    top: 20%;
+  }
+  main .video-wrapper .video-src-wrapper .play-btn .outer-ellipse {
+    width: 128px;
+    height: 128px;
+  }
+  main .video-wrapper .video-src-wrapper .play-btn .inner-ellipse {
+    width: 98.5px;
+    height: 98.5px;
+  }
+  main .video-wrapper .video-src-wrapper .play-btn .play {
+    width: 31.5px;
+    height: 27.5px;
+  }
+  main .video-wrapper .video-src-wrapper .play-btn:hover {
+    width: 148px;
+    height: 148px;
+  }
+  main .video-wrapper .video-src-wrapper .play-btn:hover .outer-ellipse {
+    width: 148px;
+    height: 148px;
+  }
+  main .video-wrapper .video-src-wrapper .play-btn:hover .inner-ellipse {
+    width: 124.5px;
+    height: 124.5px;
+  }
+  main .video-wrapper .video-src-wrapper .play-btn:hover .play {
+    width: 35px;
+    height: 32px;
   }
 }
 @media screen and (max-width: 450px) {

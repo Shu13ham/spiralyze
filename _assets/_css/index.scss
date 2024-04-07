@@ -1323,7 +1323,7 @@ footer {
       padding-top: 12px;
       .logo-wrapper {
         img {
-          width: 205px;
+          width: 156px;
           height: auto;
         }
       }
@@ -1404,7 +1404,7 @@ footer {
       }
     }
     .banner-wrapper {
-      padding-top: 50px;
+      padding-top: 44px;
       padding-bottom: 165px;
       .banner-intro {
         h1 {
@@ -1416,6 +1416,7 @@ footer {
           line-height: 24px;
           width: 100%;
           margin: 0 auto;
+          margin-bottom: 12px;
           br.desktop, br.tab{
             display: none;
           }
@@ -1442,36 +1443,43 @@ footer {
       }
       .banner-form-wrapper {
         width: 100%;
-        .banner-form form {
-          .form-group {
-            margin-top: 12px;
-            grid-template-columns: auto;
-            row-gap: 0;
-            .relative {
-              margin-bottom: 12px;
-              &:last-child {
-                margin-bottom: 0;
+        .banner-form{
+          p{
+            font-size: var(--fs-24);
+            line-height: 29px;
+            margin-bottom: 37px;
+          }
+          form {
+            .form-group {
+              margin-top: 12px;
+              grid-template-columns: auto;
+              row-gap: 0;
+              .relative {
+                margin-bottom: 16px;
+                &:last-child {
+                  margin-bottom: 0;
+                }
+              }
+            }
+            input {
+              width: 100%;
+            }
+            button {
+              width: 100%;
+              .form-submit-btn {
+                margin-right: 8px;
+              }
+            }
+            .country-input {
+              .dropdown-arrow {
+                top: 22px;
+              }
+              select {
+                margin-top: 0;
               }
             }
           }
-          input {
-            width: 100%;
-          }
-          button {
-            width: 100%;
-            .form-submit-btn {
-              margin-right: 8px;
-            }
-          }
-          .country-input {
-            .dropdown-arrow {
-              top: 22px;
-            }
-            select {
-              margin-top: 0;
-            }
-          }
-        }
+        } 
       }
     }
   }
@@ -1493,6 +1501,7 @@ footer {
           .we-understand-para {
             width: 100%;
             margin-bottom: 24px;
+            margin-right: 0 !important;
             &:nth-child(2) {
               display: block;
             }
@@ -1622,18 +1631,18 @@ footer {
       .video-bg-img2 {
         background-image: url("../_images/video-section/video-overlay-mobile.png");
         background-repeat: no-repeat;
-        background-size: 100% 60%;
+        background-size: 100% 77%;
       }
       .video-bg-img3 {
         background-image: url("../_images/video-section/video-mobile.png");
         background-repeat: no-repeat;
-        background-size: 100% 57%;
+        background-size: 100% 74%;
       }
       &.video-bg-img {
         background-image: url("../_images/video-section/video-mobile-thumbnail.png");
         background-repeat: no-repeat;
         background-position: bottom;
-        background-size: 100% 50%;
+        background-size: 100% 32%;
       }
       .footer-logo-img {
         // bottom: 24px;
@@ -1643,9 +1652,9 @@ footer {
       }
       .video-src-wrapper {
         // width: 100%;
+        height: 280px;
         .video-src {
           // width: 100%;
-          height: 280px;
           // object-fit: cover;
         }
         .play-btn {
@@ -1691,7 +1700,7 @@ footer {
     padding: 36px 16px 56px;
   }
   main .video-wrapper .video-container .video-content .video-bullet-points {
-    width: 90%;
+    width: 88%;
   }
   footer {
     padding: 34px 0;

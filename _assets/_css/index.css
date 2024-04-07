@@ -1125,7 +1125,7 @@ footer .footer-links a:hover {
     padding-top: 12px;
   }
   .header-banner-wrapper header .logo-wrapper img {
-    width: 205px;
+    width: 156px;
     height: auto;
   }
   .header-banner-wrapper header .container {
@@ -1190,7 +1190,7 @@ footer .footer-links a:hover {
     font-weight: var(--fw-700);
   }
   .header-banner-wrapper .banner-wrapper {
-    padding-top: 50px;
+    padding-top: 44px;
     padding-bottom: 165px;
   }
   .header-banner-wrapper .banner-wrapper .banner-intro h1 {
@@ -1202,6 +1202,7 @@ footer .footer-links a:hover {
     line-height: 24px;
     width: 100%;
     margin: 0 auto;
+    margin-bottom: 12px;
   }
   .header-banner-wrapper .banner-wrapper .banner-intro .banner-para br.desktop, .header-banner-wrapper .banner-wrapper .banner-intro .banner-para br.tab {
     display: none;
@@ -1228,13 +1229,18 @@ footer .footer-links a:hover {
   .header-banner-wrapper .banner-wrapper .banner-form-wrapper {
     width: 100%;
   }
+  .header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form p {
+    font-size: var(--fs-24);
+    line-height: 29px;
+    margin-bottom: 37px;
+  }
   .header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form .form-group {
     margin-top: 12px;
     grid-template-columns: auto;
     row-gap: 0;
   }
   .header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form .form-group .relative {
-    margin-bottom: 12px;
+    margin-bottom: 16px;
   }
   .header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form .form-group .relative:last-child {
     margin-bottom: 0;
@@ -1272,6 +1278,7 @@ footer .footer-links a:hover {
   main .we-understand-wrapper .we-understand-text .we-understand-para-wrapper .we-understand-para {
     width: 100%;
     margin-bottom: 24px;
+    margin-right: 0 !important;
   }
   main .we-understand-wrapper .we-understand-text .we-understand-para-wrapper .we-understand-para:nth-child(2) {
     display: block;
@@ -1380,20 +1387,20 @@ footer .footer-links a:hover {
   main .video-wrapper .video-bg-img2 {
     background-image: url("../_images/video-section/video-overlay-mobile.png");
     background-repeat: no-repeat;
-    background-size: 100% 60%;
+    background-size: 100% 77%;
   }
   main .video-wrapper .video-bg-img3 {
     background-image: url("../_images/video-section/video-mobile.png");
     background-repeat: no-repeat;
-    background-size: 100% 57%;
+    background-size: 100% 74%;
   }
   main .video-wrapper.video-bg-img {
     background-image: url("../_images/video-section/video-mobile-thumbnail.png");
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: 100% 50%;
+    background-size: 100% 32%;
   }
-  main .video-wrapper .video-src-wrapper .video-src {
+  main .video-wrapper .video-src-wrapper {
     height: 280px;
   }
 }
@@ -1402,7 +1409,7 @@ footer .footer-links a:hover {
     padding: 36px 16px 56px;
   }
   main .video-wrapper .video-container .video-content .video-bullet-points {
-    width: 90%;
+    width: 88%;
   }
   footer {
     padding: 34px 0;

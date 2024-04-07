@@ -988,6 +988,9 @@ footer .footer-links a:hover {
   main .we-can-organize-wrapper .organize-cards-wrapper {
     gap: 24px;
   }
+  main .testimonial-wrapper .prev, main .testimonial-wrapper .next {
+    display: none;
+  }
   main .video-wrapper .video-bg-img2 {
     background-image: url("../_images/video-section/video-overlay-tab.png");
     background-repeat: no-repeat;

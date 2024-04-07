@@ -1175,6 +1175,11 @@ footer {
         gap: 24px;
       }
     }
+    .testimonial-wrapper{
+      .prev, .next{
+        display: none;
+      }
+    }
     .video-wrapper {
       .video-bg-img2 {
         background-image: url("../_images/video-section/video-overlay-tab.png");

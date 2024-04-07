@@ -207,31 +207,16 @@ function validateInput() {
   }
 }
 
-document
-  .querySelector(".form-group input")
-  .addEventListener("input", validateInput);
+document.querySelector(".form-group input").addEventListener("input", validateInput);
 
-document.getElementById("play-btn").addEventListener("click", function () {
-  // Show popup
-  document.getElementById("yt-popup-overlay").style.display = "block";
-
-  // Generate random YouTube video ID
-  var videos = ["qcSKba5NVkw", "qcSKba5NVkw"]; // Add more video IDs as needed
-  var randomIndex = Math.floor(Math.random() * videos.length);
-  var randomVideoId = videos[randomIndex];
-
-  // Embed random video
-  var iframe = document.getElementById("youtube-video");
-  iframe.src = "https://www.youtube.com/embed/" + randomVideoId + "?autoplay=1";
+document.querySelector("#play-btn").addEventListener("click", function () {
+  document.querySelector("#yt-popup-overlay").style.display = "block";
+  var iframe = document.querySelector("#youtube-video");
+  iframe.src = "https://www.youtube.com/embed/qcSKba5NVkw?autoplay=1";
 });
 
-document
-  .getElementById("yt-popup-overlay")
-  .addEventListener("click", function () {
-    // Close popup
-    document.getElementById("yt-popup-overlay").style.display = "none";
-
-    // Stop video
-    var iframe = document.getElementById("youtube-video");
-    iframe.src = "";
-  });
+document.querySelector("#yt-popup-overlay").addEventListener("click", function () {
+  document.querySelector("#yt-popup-overlay").style.display = "none";
+  var iframe = document.querySelector("#youtube-video");
+  iframe.src = "";
+});

@@ -1530,7 +1530,7 @@ footer {
           width: 180px;
           position: absolute;
           top: -60px;
-          left: 50%;
+          left: 120px;
           z-index: 1;
           right: 50%;
           transform: translateX(-50%);
@@ -1551,12 +1551,16 @@ footer {
           .comment-params {
             // font-size: var(--fs-14);
             // line-height: 24px;
-            // width: 423px;
+            width: 100%;
           }
           .comment-title {
             margin-bottom: 14px;
           }
         }
+      }
+      .slider{
+        overflow: visible;
+        overflow-x: clip;
       }
       .counter .dot {
         margin: 0 18px;

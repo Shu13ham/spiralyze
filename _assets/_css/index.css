@@ -1306,7 +1306,7 @@ footer .footer-links a:hover {
     width: 180px;
     position: absolute;
     top: -60px;
-    left: 50%;
+    left: 120px;
     z-index: 1;
     right: 50%;
     transform: translateX(-50%);
@@ -1325,8 +1325,15 @@ footer .footer-links a:hover {
     top: 73px;
     right: 28px;
   }
+  main .testimonial-wrapper .slider .slides .testimonial .comment .comment-params {
+    width: 100%;
+  }
   main .testimonial-wrapper .slider .slides .testimonial .comment .comment-title {
     margin-bottom: 14px;
+  }
+  main .testimonial-wrapper .slider {
+    overflow: visible;
+    overflow-x: clip;
   }
   main .testimonial-wrapper .counter .dot {
     margin: 0 18px;

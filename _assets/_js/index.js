@@ -1,94 +1,78 @@
 document.addEventListener("DOMContentLoaded", function () {
-  startAutoPlay();
-});
+  // JavaScript for slider functionality
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".testimonial.slide");
+  const totalSlides = slides.length;
+  const slideWidth = slides[0].clientWidth;
+  let startX = 0;
+  let endX = 0;
 
-// JavaScript for slider functionality
-let currentSlide = 0;
-const slides = document.querySelectorAll(".testimonial.slide");
-const totalSlides = slides.length;
-const slideWidth = slides[0].clientWidth;
-let currentSlideIndex = 0;
-
-// Create dots for each slide
-slides.forEach((slide, index) => {
-  const dot = document.createElement("span");
-  dot.classList.add("dot");
-  if (index === 0) {
-    dot.classList.add("active");
-  }
-  dot.addEventListener("click", () => {
-    showSlide(index);
-  });
-  document.querySelector(".counter").appendChild(dot);
-});
-
-// Function to show slide by index
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    if (i === index) {
-      document.querySelector(".counter").children[i].classList.add("active");
-    } else {
-      document.querySelector(".counter").children[i].classList.remove("active");
+  // Create dots for each slide
+  slides.forEach((slide, index) => {
+    const dot = document.createElement("span");
+    dot.classList.add("dot");
+    if (index === 0) {
+      dot.classList.add("active");
     }
+    dot.addEventListener("click", () => {
+      showSlide(index);
+    });
+    document.querySelector(".counter").appendChild(dot);
   });
-}
 
-function moveSlide(n) {
-  const slideOffset = -n * slideWidth;
-  document.querySelector(
-    ".slides"
-  ).style.transform = `translateX(${slideOffset}px)`;
-}
-
-function nextSlide() {
-  currentSlide = (currentSlide + 1) % totalSlides;
-  moveSlide(currentSlide);
-  showSlide(currentSlide);
-}
-
-function prevSlide() {
-  currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-  moveSlide(currentSlide);
-  showSlide(currentSlide);
-}
-
-document.querySelector(".prev").addEventListener("click", prevSlide);
-document.querySelector(".next").addEventListener("click", nextSlide);
-
-function startAutoPlay() {
-  autoPlayTimer = setInterval(function () {
-    moveSlide(1);
-  }, 50000); // Adjust autoplay interval (in milliseconds)
-}
-
-function stopAutoPlay() {
-  clearInterval(autoPlayTimer);
-}
-
-let startX = 0;
-let endX = 0;
-
-function startDrag(event) {
-  stopAutoPlay();
-  startX = event.touches[0].clientX;
-}
-
-function drag(event) {
-  endX = event.touches[0].clientX;
-}
-
-function endDrag() {
-  const sensitivity = 50; // Adjust this value to control the sensitivity of the drag
-  const dragDistance = startX - endX;
-
-  if (dragDistance > sensitivity) {
-    moveSlide(1); // Move to next slide
-  } else if (dragDistance < -sensitivity) {
-    moveSlide(-1); // Move to previous slide
+  // Function to show slide by index
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      if (i === index) {
+        document.querySelector(".counter").children[i].classList.add("active");
+      } else {
+        document.querySelector(".counter").children[i].classList.remove("active");
+      }
+    });
+    moveSlide(index);
   }
 
-  startAutoPlay();
-}
+  function moveSlide(index) {
+    const slideOffset = -index * slideWidth;
+    document.querySelector(".slides").style.transform = `translateX(${slideOffset}px)`;
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    showSlide(currentSlide);
+  }
+
+  document.querySelector(".prev").addEventListener("click", prevSlide);
+  document.querySelector(".next").addEventListener("click", nextSlide);
+
+  function startDrag(event) {
+    startX = event.touches[0].clientX;
+  }
+
+  function drag(event) {
+    endX = event.touches[0].clientX;
+  }
+
+  function endDrag() {
+    const sensitivity = 50; // Adjust this value to control the sensitivity of the drag
+    const dragDistance = startX - endX;
+
+    if (dragDistance > sensitivity) {
+      nextSlide(); // Move to next slide
+    } else if (dragDistance < -sensitivity) {
+      prevSlide(); // Move to previous slide
+    }
+  }
+
+  document.querySelector(".slides").addEventListener("touchstart", startDrag);
+  document.querySelector(".slides").addEventListener("touchmove", drag);
+  document.querySelector(".slides").addEventListener("touchend", endDrag);
+});
 
 document.querySelectorAll(".info-card-router").forEach((card) => {
   card.addEventListener("mouseover", (event) => {
@@ -176,22 +160,31 @@ function validateForm() {
   }
 
   if (!isValid) {
-    // Form is invalid, do something (like show error message)
-    // alert("Please fill in all required fields.");
+    event.preventDefault();
   }
 
-  // return isValid;
+  return isValid;
 }
+
+function submitForm() {
+  if (validateForm()) {
+      document.querySelector('#my-form').submit();
+  }
+}
+
+document.querySelector('#my-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  submitForm();
+});
 
 function validateInput() {
   var form = document.querySelector("form");
   var elements = form.elements;
   var isValid = true;
-
   for (var i = 0; i < elements.length; i++) {
     var element = elements[i];
     if (element.tagName === "INPUT" || element.tagName === "SELECT") {
-      if (element.hasAttribute("require") && element.value.trim() === "") {
+      if (element.value.trim() === "") {
         isValid = false;
         var label = document.querySelector("label[for='" + element.id + "']");
         if (label) {

@@ -224,6 +224,12 @@ img {
         line-height: 24px;
         color: #fff;
         width: 600px;
+        br.tab, br.mobile{
+          display: none;
+        }
+        br.desktop{
+          display: block;
+        }
       }
     }
     .banner-form-wrapper {
@@ -973,6 +979,12 @@ footer {
           line-height: 28px;
           width: 574px;
           margin: 0 auto;
+          br.desktop, br.mobile{
+            display: none;
+          }
+          br.tab{
+            display: block;
+          }
         }
       }
       .banner-overlay,
@@ -1142,11 +1154,30 @@ footer {
 }
 
 @media screen and (max-width: 1024px) {
+  .header-banner-wrapper{
+    header{
+      nav {
+        .nav-link-wrapper{
+          .nav-links li {
+            a{
+              margin-right: 29px;
+            }
+          }
+        }
+      }
+    }
+    .banner-wrapper{
+      padding-bottom: 183px;
+    }
+  }
   main {
     .we-understand-wrapper {
       padding-top: 24px;
       .we-understand-images {
         column-gap: 24px;
+        img{
+          height: 128px;
+        }
       }
       .we-understand-text {
         .we-understand-para-wrapper {
@@ -1169,6 +1200,7 @@ footer {
     }
     .we-can-organize-wrapper {
       .organize-para-wrapper {
+        margin-bottom: 60px;
         .organize-para:nth-child(2) {
           margin-right: 24px;
         }
@@ -1179,7 +1211,7 @@ footer {
     }
     .testimonial-wrapper{
       .prev, .next{
-        // display: none;
+        display: none;
       }
     }
     .video-wrapper {
@@ -1237,7 +1269,8 @@ footer {
         .play-btn {
           width: 200px;
           height: 200px;
-          top: 15%;
+          top: 12%;
+          transform: translate(-50%, -50%);
           .outer-ellipse {
             width: 200px;
             height: 200px;
@@ -1251,8 +1284,8 @@ footer {
             height: 43.5px;
           }
           &:hover {
-            width: 220px;
-            height: 220px;
+            width: 228px;
+            height: 228px;
             .outer-ellipse {
               width: 228px;
               height: 228px;
@@ -1271,10 +1304,13 @@ footer {
     }
   }
   footer {
-    padding: 36px 0;
+    padding: 32px 0;
     .container {
       flex-direction: column;
       align-items: center;
+      .copyright{
+        margin-bottom: 8px;
+      }
     }
   }
 }
@@ -1380,6 +1416,12 @@ footer {
           line-height: 24px;
           width: 100%;
           margin: 0 auto;
+          br.desktop, br.tab{
+            display: none;
+          }
+          br.mobile{
+            display: block;
+          }
         }
       }
       .banner-overlay,

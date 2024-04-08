@@ -690,7 +690,7 @@ main {
     }
     .organize-cards-wrapper {
       .info-card-router {
-        width: 100%;
+        width: calc(100% - 4px);
         border: 2px solid #5bc8af;
         position: relative;
         height: 94px;
@@ -784,6 +784,7 @@ main {
           font-size: var(--fs-24);
           font-weight: var(--fw-700);
           line-height: 32px;
+          letter-spacing: 0.7px;
           margin-bottom: 8px;
         }
         img {
@@ -1049,7 +1050,7 @@ footer {
         width: 100%;
         h1 {
           text-align: center;
-          margin-bottom: 16px;
+          margin-bottom: 13px;
         }
         .banner-para {
           text-align: center;
@@ -1092,7 +1093,7 @@ footer {
           margin-right: 26px;
         }
         .comment {
-          padding: 33px 36px 33px 37px;
+          padding: 28px 36px 33px 37px;
           img {
             width: 40px;
             height: 31px;
@@ -1241,16 +1242,23 @@ footer {
               margin-right: 29px;
             }
           }
+          .call-consult{
+            width: 315px;
+          }
         }
       }
     }
     .banner-wrapper{
       padding-bottom: 183px;
+      .banner-form-wrapper .banner-form{
+        padding: 54px 28px 56px;
+      }
     }
   }
   main {
     .we-understand-wrapper {
       padding-top: 24px;
+      padding-bottom: 105px;
       .we-understand-images {
         column-gap: 24px;
         img{
@@ -1267,7 +1275,7 @@ footer {
               display: none;
             }
             .success-rate-btn {
-              margin-top: 34px;
+              margin-top: 38px;
             }
             .desktop-hide {
               display: block;
@@ -1284,12 +1292,22 @@ footer {
         }
       }
       .organize-cards-wrapper {
+        .info-card-router{
+          height: 93px;
+          width: calc(100% - 4px);
+        }
         gap: 24px;
+      }
+      h2{
+        margin-bottom: 28px;
       }
     }
     .testimonial-wrapper{
       .prev, .next{
         display: none;
+      }
+      .banner-form-wrapper .banner-form{
+        padding: 30px 36px 33px 37px;
       }
     }
     .video-wrapper {
@@ -1315,17 +1333,30 @@ footer {
           width: 100%;
         }
         .video-content {
-          padding: 102px 0 0;
+          padding: 100px 0 0;
           h2 {
             text-align: center;
-            margin-bottom: 64px;
+            margin-bottom: 62px;
+          }
+          .video-bullet-points:last-child{
+            margin-bottom: 20px;
+            position: relative;
+            top: -15px;
+            h3{
+              letter-spacing: 0.7px;
+            }
+          }
+          .video-bullet-points:nth-child(2){
+            h3{
+              letter-spacing: -0.3px;
+            }
           }
           .video-bullet-points {
-            width: 95%;
+            width: 91%;
             margin-bottom: 24px;
-            padding-left: 30px;
+            padding-left: 66px;
             img {
-              left: 0;
+              left: 24px;
             }
           }
         }
@@ -1581,16 +1612,17 @@ footer {
           flex-direction: column;
           .we-understand-para {
             width: 100%;
-            margin-bottom: 24px;
+            margin-bottom: 28px !important;
             margin-right: 0 !important;
             &:nth-child(2) {
               display: block;
             }
             &:last-child {
-              margin-bottom: 0;
+              margin-top: -8px;
+              margin-bottom: 3px !important;
             }
             .success-rate-btn {
-              margin-top: 24px;
+              margin-top: 26px;
             }
             .desktop-hide {
               display: none;
@@ -1611,7 +1643,7 @@ footer {
           width: 180px;
           position: absolute;
           top: -60px;
-          left: 120px;
+          left: 122px;
           z-index: 1;
           right: 50%;
           transform: translateX(-50%);
@@ -1621,7 +1653,7 @@ footer {
           }
         }
         .comment {
-          padding: 146px 32px 72px 32px;
+          padding: 142px 32px 72px 32px;
           border-radius: 8px;
           img {
             width: 60px;
@@ -1632,7 +1664,7 @@ footer {
           .comment-params {
             // font-size: var(--fs-14);
             // line-height: 24px;
-            width: 100%;
+            width: 99%;
           }
           .comment-title {
             margin-bottom: 14px;
@@ -1649,13 +1681,13 @@ footer {
     }
     .we-can-organize-wrapper {
       padding-bottom: 80px;
-      padding-top: 85px;
+      padding-top: 88px;
       h2 {
         font-size: var(--fs-24);
         line-height: 36px;
       }
       .organize-para-wrapper {
-        margin-bottom: 84px;
+        margin-bottom: 87px;
         flex-direction: column;
         .organize-para {
           width: 100%;
@@ -1681,7 +1713,11 @@ footer {
         grid-template-columns: auto;
         row-gap: 16px;
         .info-card-router {
-          width: 100%;
+          width: calc(100% - 4px);
+          height: 92px;
+          info-cards{
+            letter-spacing: 1px;
+          }
         }
       }
     }
@@ -1695,9 +1731,22 @@ footer {
             line-height: 48px;
             margin-bottom: 36px;
           }
+          .video-bullet-points:last-child{
+            margin-bottom: 16px;
+            position: relative;
+            top: -5px;
+            h3{
+              letter-spacing: 0.7px;
+            }
+          }
+          .video-bullet-points:nth-child(2){
+            h3{
+              letter-spacing: -0.3px;
+            }
+          }
           .video-bullet-points {
             margin-bottom: 16px;
-            padding-left: 30px;
+            padding-left: 34px;
             h3 {
               font-size: var(--fs-18);
               line-height: 24px;
@@ -1781,14 +1830,25 @@ footer {
 }
 
 @media screen and (max-width: 450px) {
-  .header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form {
-    padding: 36px 16px 56px;
+  .header-banner-wrapper .banner-wrapper{
+  .banner-intro h1{
+    margin-bottom: 12px;
   }
+    .banner-form-wrapper .banner-form {
+    form button{
+      margin-top: 40px;
+    }
+    form .country-input .dropdown-arrow{
+      top: 20px;
+    }
+      padding: 40px 16px 56px;
+    }
+  } 
   main .video-wrapper .video-container .video-content .video-bullet-points {
     width: 88%;
   }
   footer {
-    padding: 34px 0;
+    padding: 31px 0;
     .container {
       .copyright p,
       .footer-links a {

@@ -638,7 +638,7 @@ main .we-can-organize-wrapper .organize-para-wrapper .organize-para .interventio
   font-family: "Montserrat-extrabold", sans-serif;
 }
 main .we-can-organize-wrapper .organize-cards-wrapper .info-card-router {
-  width: 100%;
+  width: calc(100% - 4px);
   border: 2px solid #5bc8af;
   position: relative;
   height: 94px;
@@ -728,6 +728,7 @@ main .video-wrapper .video-content .video-bullet-points h3 {
   font-size: var(--fs-24);
   font-weight: var(--fw-700);
   line-height: 32px;
+  letter-spacing: 0.7px;
   margin-bottom: 8px;
 }
 main .video-wrapper .video-content .video-bullet-points img {
@@ -970,7 +971,7 @@ footer .footer-links a:hover {
   }
   .header-banner-wrapper .banner-wrapper .banner-intro h1 {
     text-align: center;
-    margin-bottom: 16px;
+    margin-bottom: 13px;
   }
   .header-banner-wrapper .banner-wrapper .banner-intro .banner-para {
     text-align: center;
@@ -1009,7 +1010,7 @@ footer .footer-links a:hover {
     margin-right: 26px;
   }
   main .testimonial-wrapper .slider .slides .testimonial .comment {
-    padding: 33px 36px 33px 37px;
+    padding: 28px 36px 33px 37px;
   }
   main .testimonial-wrapper .slider .slides .testimonial .comment img {
     width: 40px;
@@ -1060,11 +1061,18 @@ footer .footer-links a:hover {
   .header-banner-wrapper header nav .nav-link-wrapper .nav-links li a {
     margin-right: 29px;
   }
+  .header-banner-wrapper header nav .nav-link-wrapper .call-consult {
+    width: 315px;
+  }
   .header-banner-wrapper .banner-wrapper {
     padding-bottom: 183px;
   }
+  .header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form {
+    padding: 54px 28px 56px;
+  }
   main .we-understand-wrapper {
     padding-top: 24px;
+    padding-bottom: 105px;
   }
   main .we-understand-wrapper .we-understand-images {
     -moz-column-gap: 24px;
@@ -1080,7 +1088,7 @@ footer .footer-links a:hover {
     display: none;
   }
   main .we-understand-wrapper .we-understand-text .we-understand-para-wrapper .we-understand-para .success-rate-btn {
-    margin-top: 34px;
+    margin-top: 38px;
   }
   main .we-understand-wrapper .we-understand-text .we-understand-para-wrapper .we-understand-para .desktop-hide {
     display: block;
@@ -1094,8 +1102,18 @@ footer .footer-links a:hover {
   main .we-can-organize-wrapper .organize-cards-wrapper {
     gap: 24px;
   }
+  main .we-can-organize-wrapper .organize-cards-wrapper .info-card-router {
+    height: 93px;
+    width: calc(100% - 4px);
+  }
+  main .we-can-organize-wrapper h2 {
+    margin-bottom: 28px;
+  }
   main .testimonial-wrapper .prev, main .testimonial-wrapper .next {
     display: none;
+  }
+  main .testimonial-wrapper .banner-form-wrapper .banner-form {
+    padding: 30px 36px 33px 37px;
   }
   main .video-wrapper .video-bg-img2 {
     background-image: url("../_images/video-section/video-overlay-tab.png");
@@ -1120,19 +1138,30 @@ footer .footer-links a:hover {
     width: 100%;
   }
   main .video-wrapper .video-container .video-content {
-    padding: 102px 0 0;
+    padding: 100px 0 0;
   }
   main .video-wrapper .video-container .video-content h2 {
     text-align: center;
-    margin-bottom: 64px;
+    margin-bottom: 62px;
+  }
+  main .video-wrapper .video-container .video-content .video-bullet-points:last-child {
+    margin-bottom: 20px;
+    position: relative;
+    top: -15px;
+  }
+  main .video-wrapper .video-container .video-content .video-bullet-points:last-child h3 {
+    letter-spacing: 0.7px;
+  }
+  main .video-wrapper .video-container .video-content .video-bullet-points:nth-child(2) h3 {
+    letter-spacing: -0.3px;
   }
   main .video-wrapper .video-container .video-content .video-bullet-points {
-    width: 95%;
+    width: 91%;
     margin-bottom: 24px;
-    padding-left: 30px;
+    padding-left: 66px;
   }
   main .video-wrapper .video-container .video-content .video-bullet-points img {
-    left: 0;
+    left: 24px;
   }
   main .video-wrapper .footer-logo-img {
     bottom: 24px;
@@ -1359,17 +1388,18 @@ footer .footer-links a:hover {
   }
   main .we-understand-wrapper .we-understand-text .we-understand-para-wrapper .we-understand-para {
     width: 100%;
-    margin-bottom: 24px;
+    margin-bottom: 28px !important;
     margin-right: 0 !important;
   }
   main .we-understand-wrapper .we-understand-text .we-understand-para-wrapper .we-understand-para:nth-child(2) {
     display: block;
   }
   main .we-understand-wrapper .we-understand-text .we-understand-para-wrapper .we-understand-para:last-child {
-    margin-bottom: 0;
+    margin-top: -8px;
+    margin-bottom: 3px !important;
   }
   main .we-understand-wrapper .we-understand-text .we-understand-para-wrapper .we-understand-para .success-rate-btn {
-    margin-top: 24px;
+    margin-top: 26px;
   }
   main .we-understand-wrapper .we-understand-text .we-understand-para-wrapper .we-understand-para .desktop-hide {
     display: none;
@@ -1388,7 +1418,7 @@ footer .footer-links a:hover {
     width: 180px;
     position: absolute;
     top: -60px;
-    left: 120px;
+    left: 122px;
     z-index: 1;
     right: 50%;
     transform: translateX(-50%);
@@ -1398,7 +1428,7 @@ footer .footer-links a:hover {
     width: 180px;
   }
   main .testimonial-wrapper .slider .slides .testimonial .comment {
-    padding: 146px 32px 72px 32px;
+    padding: 142px 32px 72px 32px;
     border-radius: 8px;
   }
   main .testimonial-wrapper .slider .slides .testimonial .comment img {
@@ -1408,7 +1438,7 @@ footer .footer-links a:hover {
     right: 28px;
   }
   main .testimonial-wrapper .slider .slides .testimonial .comment .comment-params {
-    width: 100%;
+    width: 99%;
   }
   main .testimonial-wrapper .slider .slides .testimonial .comment .comment-title {
     margin-bottom: 14px;
@@ -1422,14 +1452,14 @@ footer .footer-links a:hover {
   }
   main .we-can-organize-wrapper {
     padding-bottom: 80px;
-    padding-top: 85px;
+    padding-top: 88px;
   }
   main .we-can-organize-wrapper h2 {
     font-size: var(--fs-24);
     line-height: 36px;
   }
   main .we-can-organize-wrapper .organize-para-wrapper {
-    margin-bottom: 84px;
+    margin-bottom: 87px;
     flex-direction: column;
   }
   main .we-can-organize-wrapper .organize-para-wrapper .organize-para {
@@ -1447,7 +1477,11 @@ footer .footer-links a:hover {
     row-gap: 16px;
   }
   main .we-can-organize-wrapper .organize-cards-wrapper .info-card-router {
-    width: 100%;
+    width: calc(100% - 4px);
+    height: 92px;
+  }
+  main .we-can-organize-wrapper .organize-cards-wrapper .info-card-router info-cards {
+    letter-spacing: 1px;
   }
   main .video-wrapper .video-container .video-content {
     padding: 80px 0 0;
@@ -1457,9 +1491,20 @@ footer .footer-links a:hover {
     line-height: 48px;
     margin-bottom: 36px;
   }
+  main .video-wrapper .video-container .video-content .video-bullet-points:last-child {
+    margin-bottom: 16px;
+    position: relative;
+    top: -5px;
+  }
+  main .video-wrapper .video-container .video-content .video-bullet-points:last-child h3 {
+    letter-spacing: 0.7px;
+  }
+  main .video-wrapper .video-container .video-content .video-bullet-points:nth-child(2) h3 {
+    letter-spacing: -0.3px;
+  }
   main .video-wrapper .video-container .video-content .video-bullet-points {
     margin-bottom: 16px;
-    padding-left: 30px;
+    padding-left: 34px;
   }
   main .video-wrapper .video-container .video-content .video-bullet-points h3 {
     font-size: var(--fs-18);
@@ -1527,14 +1572,23 @@ footer .footer-links a:hover {
   }
 }
 @media screen and (max-width: 450px) {
+  .header-banner-wrapper .banner-wrapper .banner-intro h1 {
+    margin-bottom: 12px;
+  }
   .header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form {
-    padding: 36px 16px 56px;
+    padding: 40px 16px 56px;
+  }
+  .header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form button {
+    margin-top: 40px;
+  }
+  .header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form .country-input .dropdown-arrow {
+    top: 20px;
   }
   main .video-wrapper .video-container .video-content .video-bullet-points {
     width: 88%;
   }
   footer {
-    padding: 34px 0;
+    padding: 31px 0;
   }
   footer .container .copyright p,
   footer .container .footer-links a {

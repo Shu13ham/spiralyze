@@ -160,7 +160,10 @@ img {
   position: relative;
   background-size: cover;
   header {
-    padding-top: 20.5px;
+    padding-top: 18.5px;
+    .main-logo{
+      width: 230px;
+    }
     nav {
       .nav-link-wrapper {
         .nav-links {
@@ -186,12 +189,17 @@ img {
           }
         }
         .call-consult {
-          margin-left: 46px;
+          margin-left: 38px;
+          width: 302px;
           p {
             font-size: var(--fs-14);
             font-weight: var(--fw-700);
             line-height: 41px;
             color: #fff;
+            position: relative;
+            left: 3px;
+            letter-spacing: 0.2px;
+            top: 1px;
             a {
               color: var(--medium);
             }
@@ -233,6 +241,8 @@ img {
         }
       }
       .banner-para {
+        position: relative;
+        left: 2px;
         font-size: var(--fs-14);
         font-weight: var(--fw-400);
         line-height: 24px;
@@ -309,8 +319,8 @@ img {
             }
             .dropdown-arrow {
               position: absolute;
-              top: 22px;
-              right: 22px;
+              top: 24px;
+              right: 15px;
             }
             .invalid-popup {
               bottom: -60px;
@@ -383,7 +393,7 @@ img {
             border-radius: 4px;
             width: 221px;
             height: 56px;
-            margin-top: 41px;
+            margin-top: 44px;
             font-size: var(--fs-18);
             font-weight: var(--fw-700);
             line-height: 22px;
@@ -487,7 +497,7 @@ main {
         .we-understand-para {
           font-size: var(--fs-14);
           font-weight: var(--fw-400);
-          line-height: 24px;
+          line-height: 23.5px;
           width: 100%;
           &:first-child,
           &:nth-child(2) {
@@ -504,6 +514,8 @@ main {
             color: var(--medium);
             border: 2px solid var(--medium);
             background: transparent;
+            padding-top: 6px;
+            padding-right: 25px;
             &:hover {
               cursor: pointer;
               box-shadow: 0px 8px 6px 0px #00000014;
@@ -533,7 +545,7 @@ main {
         .testimonial {
           .image {
             img {
-              margin-right: 36px;
+              margin-right: 40px;
               border-radius: 8px 0 0 8px;
               box-shadow: 0px 10px 30px 0px #0000001F;
             }
@@ -561,7 +573,7 @@ main {
               line-height: 28px;
               font-style: italic;
               color: #fff;
-              width: 545px;
+              width: 541px;
             }
             img {
               position: absolute;
@@ -645,7 +657,7 @@ main {
       font-family: "Montserrat-extrabold", sans-serif;
       font-size: var(--fs-36);
       font-weight: var(--fw-700);
-      line-height: 46px;
+      line-height: 43px;
       margin-bottom: 32px;
       .first-line {
         -webkit-text-stroke-width: 1px;
@@ -681,7 +693,7 @@ main {
         width: 100%;
         border: 2px solid #5bc8af;
         position: relative;
-        height: 92px;
+        height: 94px;
         cursor: pointer;
         &:hover h3 {
           color: var(--medium);
@@ -788,7 +800,7 @@ main {
           // width: 430px;
         }
         margin-bottom: 22px;
-        padding-left: 30px;
+        padding-left: 42px;
         // width: 430px;
         &:last-child {
           margin-bottom: 0;
@@ -922,14 +934,14 @@ main {
     }
     .footer-logo-img {
       position: absolute;
-      bottom: 36px;
-      right: 36px;
+      bottom: 34px;
+      right: 34px;
     }
   }
 }
 
 footer {
-  padding: 38px 0;
+  padding: 35px 0;
   background: var(--faded);
   .copyright {
     p {

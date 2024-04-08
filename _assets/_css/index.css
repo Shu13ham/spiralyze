@@ -153,7 +153,10 @@ img {
   background-size: cover;
 }
 .header-banner-wrapper header {
-  padding-top: 20.5px;
+  padding-top: 18.5px;
+}
+.header-banner-wrapper header .main-logo {
+  width: 230px;
 }
 .header-banner-wrapper header nav .nav-link-wrapper .nav-links li {
   list-style-type: none;
@@ -176,13 +179,18 @@ img {
   color: #ffffff;
 }
 .header-banner-wrapper header nav .nav-link-wrapper .call-consult {
-  margin-left: 46px;
+  margin-left: 38px;
+  width: 302px;
 }
 .header-banner-wrapper header nav .nav-link-wrapper .call-consult p {
   font-size: var(--fs-14);
   font-weight: var(--fw-700);
   line-height: 41px;
   color: #fff;
+  position: relative;
+  left: 3px;
+  letter-spacing: 0.2px;
+  top: 1px;
 }
 .header-banner-wrapper header nav .nav-link-wrapper .call-consult p a {
   color: var(--medium);
@@ -211,6 +219,8 @@ img {
   display: block;
 }
 .header-banner-wrapper .banner-wrapper .banner-intro .banner-para {
+  position: relative;
+  left: 2px;
   font-size: var(--fs-14);
   font-weight: var(--fw-400);
   line-height: 24px;
@@ -283,8 +293,8 @@ img {
 }
 .header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form .country-input .dropdown-arrow {
   position: absolute;
-  top: 22px;
-  right: 22px;
+  top: 24px;
+  right: 15px;
 }
 .header-banner-wrapper .banner-wrapper .banner-form-wrapper .banner-form form .country-input .invalid-popup {
   bottom: -60px;
@@ -354,7 +364,7 @@ img {
   border-radius: 4px;
   width: 221px;
   height: 56px;
-  margin-top: 41px;
+  margin-top: 44px;
   font-size: var(--fs-18);
   font-weight: var(--fw-700);
   line-height: 22px;
@@ -450,7 +460,7 @@ main .we-understand-wrapper .we-understand-text .about-heading .first-line {
 main .we-understand-wrapper .we-understand-text .we-understand-para-wrapper .we-understand-para {
   font-size: var(--fs-14);
   font-weight: var(--fw-400);
-  line-height: 24px;
+  line-height: 23.5px;
   width: 100%;
 }
 main .we-understand-wrapper .we-understand-text .we-understand-para-wrapper .we-understand-para:first-child, main .we-understand-wrapper .we-understand-text .we-understand-para-wrapper .we-understand-para:nth-child(2) {
@@ -467,6 +477,8 @@ main .we-understand-wrapper .we-understand-text .we-understand-para-wrapper .we-
   color: var(--medium);
   border: 2px solid var(--medium);
   background: transparent;
+  padding-top: 6px;
+  padding-right: 25px;
 }
 main .we-understand-wrapper .we-understand-text .we-understand-para-wrapper .we-understand-para .success-rate-btn:hover {
   cursor: pointer;
@@ -492,7 +504,7 @@ main .testimonial-wrapper .slider .slides {
   transition: transform 0.5s ease;
 }
 main .testimonial-wrapper .slider .slides .testimonial .image img {
-  margin-right: 36px;
+  margin-right: 40px;
   border-radius: 8px 0 0 8px;
   box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1215686275);
 }
@@ -519,7 +531,7 @@ main .testimonial-wrapper .slider .slides .testimonial .comment .comment-params 
   line-height: 28px;
   font-style: italic;
   color: #fff;
-  width: 545px;
+  width: 541px;
 }
 main .testimonial-wrapper .slider .slides .testimonial .comment img {
   position: absolute;
@@ -596,7 +608,7 @@ main .we-can-organize-wrapper h2 {
   font-family: "Montserrat-extrabold", sans-serif;
   font-size: var(--fs-36);
   font-weight: var(--fw-700);
-  line-height: 46px;
+  line-height: 43px;
   margin-bottom: 32px;
 }
 main .we-can-organize-wrapper h2 .first-line {
@@ -629,7 +641,7 @@ main .we-can-organize-wrapper .organize-cards-wrapper .info-card-router {
   width: 100%;
   border: 2px solid #5bc8af;
   position: relative;
-  height: 92px;
+  height: 94px;
   cursor: pointer;
 }
 main .we-can-organize-wrapper .organize-cards-wrapper .info-card-router:hover h3 {
@@ -710,7 +722,7 @@ main .video-wrapper .video-content .video-bullet-points {
   width: 430px;
   position: relative;
   margin-bottom: 22px;
-  padding-left: 30px;
+  padding-left: 42px;
 }
 main .video-wrapper .video-content .video-bullet-points h3 {
   font-size: var(--fs-24);
@@ -853,12 +865,12 @@ main .video-wrapper .video-src-wrapper #close-popup {
 }
 main .video-wrapper .footer-logo-img {
   position: absolute;
-  bottom: 36px;
-  right: 36px;
+  bottom: 34px;
+  right: 34px;
 }
 
 footer {
-  padding: 38px 0;
+  padding: 35px 0;
   background: var(--faded);
 }
 footer .copyright p {
